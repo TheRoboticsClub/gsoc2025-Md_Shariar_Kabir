@@ -90,6 +90,45 @@
             href="http://localhost:4000/gsoc2025-Md_Shariar_Kabir/blog/2025/week1/"
         />
 
+        <style>
+            /* Hide default checkbox appearance */
+            input[type="checkbox"].task-list-item-checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #ccc;
+                position: relative;
+                cursor: not-allowed;
+            }
+
+            /* Checked + disabled style */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked {
+                background-color: green; /* Green background */
+            }
+
+            /* White checkmark for checked box */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+
+            .task-list {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        </style>
+
         <!-- Dark Mode -->
 
         <link
