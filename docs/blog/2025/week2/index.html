@@ -94,8 +94,8 @@
             input[type="checkbox"].task-list-item-checkbox {
                 appearance: none;
                 -webkit-appearance: none;
-                width: 20px;
-                height: 20px;
+                width: 18px;
+                height: 18px;
                 border: none;
                 border-radius: 4px;
                 background-color: #ccc;
@@ -119,6 +119,12 @@
                 border: solid white;
                 border-width: 0 2px 2px 0;
                 transform: rotate(45deg);
+            }
+
+            .task-list {
+                display: flex;
+                align-items: center;
+                gap: 10px;
             }
         </style>
 
@@ -309,6 +315,7 @@
                                     type="checkbox"
                                     class="task-list-item-checkbox"
                                     disabled
+                                    checked
                                 />Create Human Detection and Digit
                                 Classification exercises
                             </li>
@@ -317,6 +324,7 @@
                                     type="checkbox"
                                     class="task-list-item-checkbox"
                                     disabled
+                                    checked
                                 />Implement support for user-uploaded ONNX
                                 models
                             </li>
@@ -325,6 +333,7 @@
                                     type="checkbox"
                                     class="task-list-item-checkbox"
                                     disabled
+                                    checked
                                 />Beta test the exercises to ensure
                                 functionality and usability
                             </li>
@@ -333,6 +342,7 @@
                                     type="checkbox"
                                     class="task-list-item-checkbox"
                                     disabled
+                                    checked
                                 />
                                 Update local exercise database
                             </li>
@@ -341,6 +351,7 @@
                                     type="checkbox"
                                     class="task-list-item-checkbox"
                                     disabled
+                                    checked
                                 />Study PyTorch and ONNX
                             </li>
                         </ul>
