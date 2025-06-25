@@ -90,6 +90,10 @@
 
         <!--  -->
         <style>
+            /* p tag text justify */
+            p {
+                text-align: justify;
+            }
             /* Hide default checkbox appearance */
             input[type="checkbox"].task-list-item-checkbox {
                 appearance: none;
@@ -297,21 +301,49 @@
                 <article class="post-content">
                     <div id="markdown-content">
                         <h2 id="preliminaries">Preliminaries</h2>
-                        <!-- <p>
-                            The main goal of this week is to expand the model
-                            such that the agent can make turns in any direction
-                            at intersections instead of
-                            <a href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week3"
-                                >always turning right</a
-                            >. In order to achieve this, the model needs to take
-                            a high-level command (LaneFollow, Left, Right,
-                            Straight) in addition to sensory input to guide it
-                            to either follow the lane or make turns at
-                            junctions. Thus, a new data collection routine needs
-                            to be implemented and the model architecture needs
-                            to be updated to incorporate the high-level command.
-                        </p> -->
+                        <p>
+                            In Week 4 of GSoC, my primary focus was on enhancing
+                            the usability, documentation, and overall user
+                            experience and training a human detection model
+                            using the PyTorch framework of the newly developed
+                            deep learning-based exercises:
+                            <strong>Deep Learning-Based Human Detection</strong>
+                            and
+                            <strong
+                                >Deep Learning-Based Digit
+                                Classification</strong
+                            >. These exercises are part of the RoboticsAcademy
+                            platform and are designed to demonstrate the
+                            application of <strong>ONNX</strong> models in
+                            computer vision tasks.
+                        </p>
+                        <p>
+                            To make the exercises more accessible and
+                            informative for the users, I thoroughly updated the
+                            web documentation for both exercises. The revised
+                            content provides clear instructions on how to upload
+                            an ONNX model, configure the environment, and
+                            execute the demo workflows. This is particularly
+                            helpful for students and developers who are new to
+                            deploying machine learning models in robotics
+                            contexts. In addition, I recorded and edited a
+                            YouTube tutorial video that visually walks users
+                            through the exercises, helping them understand the
+                            interface, model loading process, and expected
+                            output.
+                        </p>
+                        <p>
+                            As part of the documentation effort, I also created
+                            dedicated GitHub issues for tracking the changes and
+                            submitted pull requests to the gh-pages branch,
+                            ensuring the updated documentation would be
+                            published to the official RoboticsAcademy website.
+                        </p>
+                        These improvements aim to provide a more intuitive and
+                        resource-rich experience for users exploring deep
+                        learning within the RoboticsAcademy.
 
+                        <!-- Objectives TODO: -->
                         <h2 id="objectives">Objectives</h2>
                         <ul class="task-list">
                             <li class="task-list-item">
@@ -320,7 +352,8 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Update documents
+                                />Add an abstract model path feature to support
+                                dynamic ONNX model paths in exercises.
                             </li>
                             <li class="task-list-item">
                                 <input
@@ -328,7 +361,9 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Experience with Human detection.
+                                />Update and improve the web documentation for
+                                Human Detection and Digit Classification
+                                exercises.
                             </li>
                             <li class="task-list-item">
                                 <input
@@ -336,9 +371,21 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Make YT video for proper guide.
+                                />Create GitHub issues to track
+                                documentation-related updates.
                             </li>
-                            <li class="task-list-item"></li>
+                            <li class="task-list-item">
+                                Submit pull requests to publish updated
+                                documentation.
+                            </li>
+                            <li class="task-list-item">
+                                Create a tutorial-style YouTube video to
+                                showcase how users can interact with the
+                                exercises.
+                            </li>
+                            <li class="task-list-item">
+                                Human Detection (Todos)
+                            </li>
                         </ul>
 
                         <!-- 
