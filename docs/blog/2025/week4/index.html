@@ -131,7 +131,7 @@
             }
             .task-list-item {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 gap: 10px;
             }
             .task-list-item span {
@@ -451,51 +451,97 @@
                             </li>
                         </ul>
                         <h2 id="execution">Execution</h2>
-                        <!-- old -->
+                        <h5>Abstract Model Path</h5>
                         <p>
-                            In Week 4 of GSoC, my primary focus was on enhancing
-                            the usability, documentation, and overall user
-                            experience and training a human detection model
-                            using the PyTorch framework of the newly developed
-                            deep learning-based exercises:
-                            <strong>Deep Learning-Based Human Detection</strong>
-                            and
-                            <strong
-                                >Deep Learning-Based Digit
-                                Classification</strong
-                            >. These exercises are part of the RoboticsAcademy
-                            platform and are designed to demonstrate the
-                            application of <strong>ONNX</strong> models in
-                            computer vision tasks.
+                            Implement an abstract model path feature to support
+                            dynamic <strong>ONNX</strong> model paths in
+                            exercises. Implement an abstract model path feature
+                            to support dynamic <strong>ONNX</strong> model paths
+                            in exercises. So the user can import the model path
+                            rather than the hard-coded path. If we change the
+                            model storage path internally, then we don't need to
+                            update all the documentation, and the user can use
+                            the path seamlessly.
                         </p>
-                        <p>
-                            To make the exercises more accessible and
-                            informative for the users, I thoroughly updated the
-                            web documentation for both exercises. The revised
-                            content provides clear instructions on how to upload
-                            an ONNX model, configure the environment, and
-                            execute the demo workflows. This is particularly
-                            helpful for students and developers who are new to
-                            deploying machine learning models in robotics
-                            contexts. In addition, I recorded and edited a
-                            YouTube tutorial video that visually walks users
-                            through the exercises, helping them understand the
-                            interface, model loading process, and expected
-                            output.
-                        </p>
-                        <p>
-                            As part of the documentation effort, I also created
-                            dedicated GitHub issues for tracking the changes and
-                            submitted pull requests to the gh-pages branch,
-                            ensuring the updated documentation would be
-                            published to the official RoboticsAcademy website.
-                        </p>
-                        These improvements aim to provide a more intuitive and
-                        resource-rich experience for users exploring deep
-                        learning within the RoboticsAcademy.
-                        <!-- 
+                        <h4>Example Code:</h4>
+                        <div class="language-plaintext highlighter-rouge">
+                            <div class="highlight">
+                                <pre class="highlight">
+                                    <code>from model import model_path</code>
+                                </pre>
+                            </div>
+                        </div>
 
-                        
+                        <h5>Enhancing and Enrich document</h5>
+                        <p>
+                            I updated the documentation for both deep learning
+                            exercises. This includes adding example code
+                            snippets, updating the instruction images, and
+                            creating a tutorial video for each exercise to help
+                            users better understand and use the exercises.
+                            Additionally, I clarified the step-by-step workflow
+                            for running the exercises, highlighted common issues
+                            users might encounter, and provided troubleshooting
+                            tips. The documentation now also explains the
+                            expected input/output formats, and links to relevant
+                            resources for further learning. These improvements
+                            aim to make the exercises more accessible and
+                            user-friendly for both beginners and advanced users.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                gap: 10px;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-4/digit-classification-exercise-instruction-img-1.png"
+                                alt="week-2-img-1"
+                                width="100%"
+                            />
+                            <span
+                                >Basic instruction of digit classification</span
+                            >
+                        </div>
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                gap: 10px;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-4/human-detection-exercise-instruction-img-1.png"
+                                alt="week-2-img-1"
+                                width="100%"
+                            />
+                            <span>Basic instruction of human detection</span>
+                        </div>
+
+                        <!-- github issues and pull requests -->
+                        <h5>GitHub Issues and Pull Requests</h5>
+                        <p>
+                            I created GitHub issues to track the updates made to
+                            the documentation of the Human Detection and Digit
+                            Classification exercises. These issues outline the
+                            specific changes made, such as adding example code
+                            snippets, updating instruction images, and creating
+                            tutorial videos. I also submitted pull requests with
+                            the corresponding changes to the
+                            <code>gh-pages</code>
+                            branch. These pull requests include detailed
+                            descriptions of the changes made, along with links
+                            to the updated documentation. The issues and pull
+                            requests serve as a record of the updates made to
+                            the documentation and provide a way for others to
+                            review and contribute to the documentation.
+                        </p>
+                        <!-- 
                         <h3 id="high-level-commands">High-Level Commands</h3>
                         <p>
                             The main challenge was two-fold: recording
