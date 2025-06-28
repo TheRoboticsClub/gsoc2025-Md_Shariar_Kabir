@@ -637,177 +637,27 @@
                             referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen
                         ></iframe>
-                        <!-- 
-                        <h3 id="high-level-commands">High-Level Commands</h3>
+
+                        <h4 style="margin-top: 2rem">Improve exercises UI</h4>
                         <p>
-                            The main challenge was two-fold: recording
-                            high-level commands during the data collection phase
-                            and then supplying these commands during inference
-                            time without the need to implement a route planner.
-                            Starting from CARLA version 0.9.13, we can access
-                            turning decisions via the traffic manager API, which
-                            eased the first problem. For the second issue, we
-                            opted for a hard-coded sequence of turning decisions
-                            at each junction during every testing episode, akin
-                            to following directions from a GPS navigator, such
-                            as “Left Right Left.”
+                            I updated the hover effect of the upload button in
+                            both the Human Detection and Digit Classification
+                            exercises, incorporating the feedback provided by
+                            reviewer.
                         </p>
 
+                        <h4 style="margin-top: 2rem">Deep learning study</h4>
                         <p>
-                            During testing, at each frame, the high-level
-                            command defaults to LaneFollow unless the agent is
-                            at a junction. For every new junction the agent
-                            encounters, it reads the next turning decision from
-                            the sequence. The agent is gauranteed to arrive at
-                            the target location following the turning
-                            instructions.
+                            I have done the study and hands-on practice
+                            <a
+                                href="https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >"Deep Learning with PyTorch: A 60 Minute
+                                Blitz,"</a
+                            >
+                            recommended by mentors.
                         </p>
-
-                        <h3 id="model-architecture-update">
-                            Model Architecture Update
-                        </h3>
-                        <p>
-                            As described
-                            <a href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week1"
-                                >previously</a
-                            >, the model takes the RGB camera image and semantic
-                            segmentation stacked as a 6-channel image and feeds
-                            it through a convolutional LSTM network. The output
-                            is flattened and concatenated with the speed
-                            measurement and then sent through three linear
-                            layers to produce the driving commands: throttle,
-                            steer, and brake. In order to incorporate the
-                            high-level commands, which are discre values, we
-                            employed an embedding layer. This layer produces
-                            embedding vectors of length 5 from the input
-                            high-level command, which are then concatenated with
-                            the flattened visual features and speed measurement
-                            before passed through the linear layers.
-                        </p>
-
-                        <h3 id="traffic-light-problem">
-                            Traffic Light Problem
-                        </h3>
-                        <p>
-                            During data collection, the expert vehicle is set to
-                            ignore traffic lights and signs. Naturally, the
-                            trained agent will also acquire the same behavior as
-                            in training data. This causes a problem where the
-                            agent occasionally runs red lights, potentially
-                            colliding with other vehicles. The video below
-                            demonstrates one example where the agent almost
-                            collides with a truck as it attempts to make a turn
-                            against a red light. Interestingly, the agent was
-                            able to recover back to the lane after barely
-                            avoiding the collision. We also experimented with
-                            setting all traffic lights to green, but this
-                            solution proved ineffective as all vehicles tried to
-                            cross intersections simultaneously, essentially
-                            mirroring the original problem.
-                        </p>
-
-                        <iframe
-                            src="https://drive.google.com/file/d/1AsqyY9NQbzt7j0Ip6IZhHgrA-TNkVrQc/preview"
-                            width="800"
-                            height="450"
-                            allow="autoplay"
-                        ></iframe>
-
-                        <h3 id="distance-to-the-leading-vehicle">
-                            Distance to the Leading Vehicle
-                        </h3>
-                        <p>
-                            We trained our model using two slightly different
-                            datasets. For the first dataset, during data
-                            collection, the distance to the leading vehicle was
-                            set to 2.5 meters, meaning that the expert vehicle
-                            was instructed to maintain a distance of 2.5 meters
-                            from the vehicle in front of it. Following the
-                            training of our model on this dataset, we observed
-                            that although the agent did well at lane following,
-                            it frequently collided with the vehicle ahead. This
-                            prompted us to make an adjustment to the distance to
-                            the leading vehicle using the traffic manager, thus
-                            generating a second dataset. The evaluation results,
-                            as shown below, indicate that by making the expert
-                            agent more “cautious” during data collection, the
-                            trained agent will also try to maintain a larger
-                            distance from other vehicles, effectively reducing
-                            the risk of collision.
-                        </p>
-
-                        <h3 id="evaluation-metrics">Evaluation Metrics</h3>
-                        <p>
-                            We explored two evalaution metrics: success rate and
-                            distance traveled before a collision occurs for
-                            failed cases. All testing is done in Town02, a map
-                            unseen to the model during training. We sampled 12
-                            routes in Town02 for evaluation, each consisting of
-                            exactly two turns.
-                        </p>
-
-                        <p>
-                            We compared the models trained on the two datasets
-                            as described above.
-                        </p>
-                        <ul>
-                            <li>
-                                <strong>v6.1</strong>: expert maintains a
-                                distance of 2.5 meters to leading vehicle
-                                <div
-                                    class="language-plaintext highlighter-rouge"
-                                >
-                                    <div class="highlight">
-                                        <pre
-                                            class="highlight"
-                                        ><code>success rate: 0.417
-average distance traveled before collision (failed cases): 94.04mF
-</code></pre>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <strong>v6.2</strong>: expert maintains a
-                                distance of 4 meters to leading vehicle
-                                <div
-                                    class="language-plaintext highlighter-rouge"
-                                >
-                                    <div class="highlight">
-                                        <pre
-                                            class="highlight"
-                                        ><code>success rate: 0.083 |
-average distance traveled before collision (failed cases): 88.22m
-</code></pre>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <p>
-                            For the next steps, it would also be interesting to
-                            evaluate success rate weighted by distance.
-                        </p>
-
-                        <h3 id="demo">Demo</h3>
-                        <p>
-                            The two videos below demonstrate a successful and a
-                            failed episode during testing time respectively.
-                        </p>
-                        <iframe
-                            src="https://drive.google.com/file/d/1xqDArqP-86vZy0_beMsvcXG2nI53jffm/preview"
-                            width="800"
-                            height="450"
-                            allow="autoplay"
-                        ></iframe>
-
-                        <iframe
-                            src="https://drive.google.com/file/d/1d6AOEehk5IqmbZEvFPJKB25hxxPHEgpr/preview"
-                            width="800"
-                            height="450"
-                            allow="autoplay"
-                        ></iframe>
-                        -->
-
                         <!-- TODO: REFENERCE -->
                         <h2 id="references">References</h2>
                         <p
