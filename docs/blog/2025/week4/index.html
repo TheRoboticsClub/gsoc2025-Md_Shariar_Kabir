@@ -302,6 +302,115 @@
                     <div id="markdown-content">
                         <h2 id="preliminaries">Preliminaries</h2>
                         <p>
+                            This week, I focused on refining and enhancing the
+                            deep learning exercises
+                            <strong>Human Detection</strong> and
+                            <strong>Digit Classification</strong> to improve
+                            their clarity, usability, and visual presentation. I
+                            updated the documentation for both exercises by
+                            adding relevant example code snippets, refreshing
+                            the instruction images, and creating step-by-step
+                            video tutorials to guide users through the process
+                            of running and interacting with the exercises.
+                        </p>
+                        <p>
+                            Based on feedback provided by the reviewer, I also
+                            updated the hover effect of the upload button in
+                            both exercises to improve the UI/UX. To ensure
+                            proper tracking and collaboration, I created
+                            <strong>GitHub issues</strong> for these updates and
+                            submitted <strong>pull requests</strong> with the
+                            corresponding changes to the
+                            <code>gh-pages</code> branch.
+                        </p>
+                        <p>
+                            In parallel, I followed the recommended
+                            <a
+                                href="https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >"Deep Learning with PyTorch: A 60 Minute
+                                Blitz"</a
+                            >
+                            tutorial by mentors. This hands-on study helped me
+                            strengthen my understanding of PyTorch fundamentals,
+                            which will be useful for future improvements and
+                            model development within the exercises.
+                        </p>
+
+                        <!-- Objectives TODO: -->
+                        <h2 id="objectives">Objectives</h2>
+                        <ul class="task-list">
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />Implement an abstract model path feature to
+                                support dynamic ONNX model paths in exercises.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />I updated and improved the web documentation
+                                for the Human Detection and Digit Classification
+                                exercises, enhancing clarity, structure, and
+                                user guidance.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />Create GitHub issues to track
+                                documentation-related updates.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />Submit pull requests to publish updated
+                                documentation.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    checked
+                                    disabled
+                                />Create a tutorial-style YouTube video and
+                                instruction images to showcase how users can
+                                interact with the exercises.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    checked
+                                    disabled
+                                />Improved the front-end interface of the
+                                exercises based on the review feedback
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />study and hands-on practice Deep Learning with
+                                PyTorch
+                            </li>
+                        </ul>
+                        <h2 id="execution">Execution</h2>
+                        <!-- old -->
+                        <p>
                             In Week 4 of GSoC, my primary focus was on enhancing
                             the usability, documentation, and overall user
                             experience and training a human detection model
@@ -342,69 +451,9 @@
                         These improvements aim to provide a more intuitive and
                         resource-rich experience for users exploring deep
                         learning within the RoboticsAcademy.
-
-                        <!-- Objectives TODO: -->
-                        <h2 id="objectives">Objectives</h2>
-                        <ul class="task-list">
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Add an abstract model path feature to support
-                                dynamic ONNX model paths in exercises.
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Update and improve the web documentation for
-                                Human Detection and Digit Classification
-                                exercises.
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Create GitHub issues to track
-                                documentation-related updates.
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Submit pull requests to publish updated
-                                documentation.
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                />Create a tutorial-style YouTube video to
-                                showcase how users can interact with the
-                                exercises.
-                            </li>
-                            <!-- TODO: UPDATE THE TEXT -->
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                />Human Detection
-                            </li>
-                        </ul>
-
                         <!-- 
 
-                        <h2 id="execution">Execution</h2>
+                        
                         <h3 id="high-level-commands">High-Level Commands</h3>
                         <p>
                             The main challenge was two-fold: recording
@@ -528,7 +577,7 @@
                                         <pre
                                             class="highlight"
                                         ><code>success rate: 0.417
-average distance traveled before collision (failed cases): 94.04m
+average distance traveled before collision (failed cases): 94.04mF
 </code></pre>
                                     </div>
                                 </div>
@@ -574,6 +623,24 @@ average distance traveled before collision (failed cases): 88.22m
                             allow="autoplay"
                         ></iframe>
                         -->
+
+                        <!-- TODO: REFENERCE -->
+                        <h2 id="references">References</h2>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [1]
+                            <a
+                                href="https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Deep Learning with PyTorch: A 60 Minute Blitz
+                            </a>
+                        </p>
                     </div>
                 </article>
 
