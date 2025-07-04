@@ -300,42 +300,35 @@
                 <article class="post-content">
                     <div id="markdown-content">
                         <h2 id="preliminaries">Preliminaries</h2>
-                        <!-- <p>
-                            Our current model employs an embedding layer to
-                            process the high-level commands, which are then
-                            concatenated with the flattened visual features.
-                            However, given that we only have four discrete
-                            high-level commands, the use of an embedding layer
-                            might be overcomplicated for our scenario.
-                            Therefore, we plan to experiment with one-hot
-                            encoding for these high-level commands this week.
-                        </p>
-
                         <p>
-                            Until now, our model has ignored traffic lights as
-                            the expert agent was configured to do so during data
-                            collection. However, we believe incorporating
-                            traffic light status as an additional input to our
-                            model would make our agent more compliant with
-                            real-world traffic regulations.
+                            In Week 5 of my GSoC journey with RoboticsAcademy, I
+                            focused on preparing data for training an autonomous
+                            driving model. The goal was to enable a deep
+                            learning-based F1 car to follow a track by learning
+                            from real movement data in a simulated environment.
                         </p>
-
                         <p>
-                            With the approaching midterm evaluation and the
-                            significant progress we’ve made so far, we are also
-                            considering creating a demo video of our work. We
-                            aim to showcase our advancements on our
+                            To achieve this, I began collecting sample datasets
+                            from the
                             <a
-                                href="https://www.youtube.com/@jderobot/videos"
-                                rel="external nofollow noopener"
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
                                 target="_blank"
-                                >Youtube Channel</a
-                            >. Moreover, we plan to update our code repository
-                            and compose a comprehensive README to provide better
-                            guidance for those interested in our project. and
-                            write a README.
-                        </p> -->
-
+                                rel="noopener noreferrer"
+                            >
+                                line-following F1 circuits</a
+                            >
+                            provided within the RoboticsAcademy simulations.
+                            These datasets will later be used to train a model
+                            that takes images and motion parameters (linear and
+                            angular velocity) as inputs to learn control
+                            behavior.
+                        </p>
+                        <p>
+                            This dataset collection phase is crucial for
+                            building an end-to-end autonomous driving exercise
+                            that integrates vision and control using deep
+                            learning.
+                        </p>
                         <h2 id="objectives">Objectives</h2>
                         <!-- <ul class="task-list">
                             <li class="task-list-item">
@@ -376,6 +369,26 @@
                         </ul> -->
 
                         <h2 id="execution">Execution</h2>
+
+                        <!-- TODO: REFENERCE -->
+                        <h2 id="references" style="margin-top: 2rem">
+                            References
+                        </h2>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [1]
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Visual Follow Line
+                            </a>
+                        </p>
                     </div>
                 </article>
 
