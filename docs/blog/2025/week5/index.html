@@ -526,6 +526,52 @@
                             while keeping the development environment isolated
                             and reproducible.
                         </p>
+
+                        <!-- data collection summary -->
+                        <h4 class="mt-1 mb-1">Data Collection Summary</h4>
+                        <p>
+                            I collected a total of
+                            <strong>84,969 images</strong> from various
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                follow-line circuits
+                            </a>
+                            using the simulated follow-line exercise in
+                            RoboticsAcademy. Each image was captured along with
+                            the corresponding control commands—
+                            <strong>linear velocity (V)</strong> and
+                            <strong>angular velocity (W)</strong>—to support
+                            supervised learning for autonomous navigation. The
+                            images were captured at a resolution of
+                            <strong>640x480 pixels</strong>, providing a clear
+                            view of the road and surrounding environment.
+                        </p>
+                        <p>
+                            To keep the dataset well-organized and easy to use
+                            for training deep learning models, I stored the data
+                            in a single CSV file. Each row in the CSV contains:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Image path</strong> (<code>
+                                    images/12345.png
+                                </code>
+                                )
+                            </li>
+                            <li>
+                                <strong>Linear velocity (V)</strong> –
+                                representing the forward speed of the car
+                            </li>
+                            <li>
+                                <strong>Angular velocity (W)</strong> –
+                                representing the steering angle or rotational
+                                speed
+                            </li>
+                        </ul>
+
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
