@@ -136,6 +136,19 @@
             }
             .task-list-item span {
             }
+
+            .mt-2 {
+                margin-top: 2rem;
+            }
+            .mt-1 {
+                margin-top: 1rem;
+            }
+            .mb-2 {
+                margin-bottom: 2rem;
+            }
+            .mb-1 {
+                margin-bottom: 1rem;
+            }
         </style>
 
         <!-- Dark Mode -->
@@ -319,8 +332,8 @@
                             >
                             provided within the RoboticsAcademy simulations.
                             These datasets will later be used to train a model
-                            that takes images and motion parameters (linear and
-                            angular velocity) as inputs to learn control
+                            that takes images and motion parameters (linear (v)
+                            and angular velocity (w)) as inputs to learn control
                             behavior.
                         </p>
                         <p>
@@ -329,47 +342,38 @@
                             that integrates vision and control using deep
                             learning.
                         </p>
-                        <h2 id="objectives">Objectives</h2>
-                        <!-- <ul class="task-list">
+                        <h2 id="objectives" class="mt-2">Objectives</h2>
+                        <ul class="task-list">
                             <li class="task-list-item">
                                 <input
                                     type="checkbox"
+                                    id="input-1"
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Replace the embedding layer for high-level
-                                commands with one-hot encoding
+                                />
+                                <span
+                                    >Capture synchronized camera images, linear
+                                    velocity (V), and angular velocity (W) as
+                                    the F1 car navigates the circuits</span
+                                >
                             </li>
                             <li class="task-list-item">
                                 <input
                                     type="checkbox"
+                                    id="input-1"
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Introduce traffic light status as an
-                                additional input to the model
+                                />
+                                <span
+                                    >Cropped the collected images to focus on
+                                    the road area for training</span
+                                >
                             </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Write a README for repository
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Produce a demo video for the JdeRobot Youtube
-                                Channel
-                            </li>
-                        </ul> -->
-
-                        <h2 id="execution">Execution</h2>
-
+                        </ul>
+                        <h2 id="execution" class="mt-2">Execution</h2>
+                        <h4 class="mt-1"></h4>
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
