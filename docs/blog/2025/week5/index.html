@@ -138,16 +138,16 @@
             }
 
             .mt-2 {
-                margin-top: 2rem;
+                margin-top: 2rem !important;
             }
             .mt-1 {
-                margin-top: 1rem;
+                margin-top: 1rem !important;
             }
             .mb-2 {
-                margin-bottom: 2rem;
+                margin-bottom: 2rem !important;
             }
             .mb-1 {
-                margin-bottom: 1rem;
+                margin-bottom: 1rem !important;
             }
         </style>
 
@@ -476,7 +476,56 @@
                         </div>
 
                         <h4 class="mt-1 mb-1">Data Collection Workflow</h4>
-
+                        <p>
+                            To generate training data for the deep
+                            learning-based line-following model, I ran the
+                            Follow-Line exercises in RoboticsAcademy using a
+                            custom Python script. This script was designed to:
+                        </p>
+                        <ul>
+                            <li>
+                                Capture camera images from the simulation in
+                                real-time.
+                            </li>
+                            <li>
+                                Log the associated control commands linear
+                                velocity (V) and angular velocity (W) for each
+                                image frame using
+                                <a
+                                    href="https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    PID
+                                </a>
+                                .
+                            </li>
+                            <li>
+                                Save the data in a structured format:
+                                <ul>
+                                    <li>
+                                        Images were saved in a directory (e.g.,
+                                        <code>data/images/</code>).
+                                    </li>
+                                    <li>
+                                        Metadata (image path, V, W) was logged
+                                        in a CSV file.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>
+                            Since the RoboticsAcademy exercises run inside a
+                            Docker container, all collected data was initially
+                            stored within the container's filesystem. After the
+                            collection process,I accessed the container’s
+                            storage and Copied the entire dataset (images + CSV)
+                            from the container to my local machine for further
+                            preprocessing and model training. This workflow
+                            allowed me to automate the data collection process
+                            while keeping the development environment isolated
+                            and reproducible.
+                        </p>
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
@@ -494,6 +543,22 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >Visual Follow Line
+                            </a>
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            <!-- TODO: UDPAT THE SERIAL -->
+                            [*]
+                            <a
+                                href="https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PID Controller
                             </a>
                         </p>
                     </div>
