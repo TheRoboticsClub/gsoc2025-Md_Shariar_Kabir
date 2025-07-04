@@ -530,8 +530,8 @@
                         <!-- data collection summary -->
                         <h4 class="mt-1 mb-1">Data Collection Summary</h4>
                         <p>
-                            I collected a total of
-                            <strong>84,969 images</strong> from various
+                            I ran a single loop for each circuit. I collected a
+                            total of <strong>84,969 images</strong> from various
                             <a
                                 href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
                                 target="_blank"
@@ -572,6 +572,74 @@
                             </li>
                         </ul>
 
+                        <h4 class="mt-1 mb-1">
+                            Image Preprocessing: Cropping for Region of Interest
+                        </h4>
+                        <p>
+                            To prepare the dataset for training, I performed a
+                            cropping operation on each captured image. The
+                            original images were of size
+                            <strong>640×480 pixels</strong>, which included
+                            irrelevant portions such as the sky and background.
+                        </p>
+                        <p>
+                            A
+                            <a
+                                href="https://gsyc.urjc.es/jmplaza/papers/waf2024-jmplaza-final.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >research paper</a
+                            >
+                            shared by my <strong>mentors</strong> employed the
+                            same image cropping technique, which further
+                            validated the effectiveness of the approach used in
+                            this dataset.
+                        </p>
+                        <p>
+                            To focus the model on the road and track area (red
+                            line), I cropped the images to a size of
+                            <strong>640×240</strong>
+                            pixels, removing the top section that primarily
+                            contained the sky/background. This ensured that the
+                            input to the model highlights the most relevant
+                            visual information for line following, improving
+                            both training efficiency and model accuracy.
+                        </p>
+                        <h5 class="mt-1 mb-1">
+                            Original image and Cropped image
+                        </h5>
+
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: flex-end;
+                                width: 100%;
+                                gap: 8px;
+                                margin-top: 2rem;
+                            "
+                        >
+                            <div style="width: 48%; height: 480px">
+                                <img
+                                    src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-5/original-image.png"
+                                    alt="week-2-img-1"
+                                    width="100%"
+                                    height="480px"
+                                />
+                                <span>Original image</span>
+                            </div>
+                            <div style="width: 48%; height: 480px">
+                                <img
+                                    src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-5/cropped-image-1.png"
+                                    alt="week-2-img-1"
+                                    width="100%"
+                                    height="480px"
+                                />
+                                <span>Cropped image</span>
+                            </div>
+                        </div>
+
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
@@ -591,6 +659,23 @@
                                 >Visual Follow Line
                             </a>
                         </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [2]
+                            <a
+                                href="https://gsyc.urjc.es/jmplaza/papers/waf2024-jmplaza-final.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >[paper] Imitation Learning for vision based
+                                Autonomous Driving with Ackermann cars
+                            </a>
+                        </p>
+
                         <p
                             style="
                                 display: flex;
