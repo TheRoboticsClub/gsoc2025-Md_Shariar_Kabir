@@ -13,9 +13,9 @@
         />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>
-            Week 6: July 03 ~ July 09 | Meiqi Zhao | JdeRobot x GSoC2023
+            Week 6: July 07 ~ July 13 | Md. Shariar Kabir | JdeRobot x GSoC2025
         </title>
-        <meta name="author" content="JdeRobot x Google Summer of Code 2023" />
+        <meta name="author" content="JdeRobot x Google Summer of Code 2025" />
         <meta
             name="description"
             content="More sophisticated evaluation metrics"
@@ -81,13 +81,74 @@
         />
         <link
             rel="stylesheet"
-            href="/gsoc2023-Meiqi_Zhao/assets/css/main.css"
+            href="/gsoc2025-Md_Shariar_Kabir/assets/css/main.css"
         />
         <link
             rel="canonical"
-            href="http://localhost:4000/gsoc2023-Meiqi_Zhao/blog/2023/week6/"
+            href="http://localhost:4000/gsoc2025-Md_Shariar_Kabir/blog/2025/week6/"
         />
+        <!-- custom style -->
+        <style>
+            /* p tag text justify */
+            p {
+                text-align: justify;
+            }
+            /* Hide default checkbox appearance */
+            input[type="checkbox"].task-list-item-checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #ccc;
+                position: relative;
+                cursor: not-allowed;
+            }
 
+            /* Checked + disabled style */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked {
+                background-color: green; /* Green background */
+            }
+
+            /* White checkmark for checked box */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+            .task-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .task-list-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .task-list-item span {
+            }
+
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+        </style>
         <!-- Dark Mode -->
 
         <link
@@ -97,8 +158,8 @@
             id="highlight_theme_dark"
         />
 
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/theme.js"></script>
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/dark_mode.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/theme.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/dark_mode.js"></script>
     </head>
 
     <!-- Body -->
@@ -113,8 +174,8 @@
                 <div class="container">
                     <a
                         class="navbar-brand title font-weight-lighter"
-                        href="/gsoc2023-Meiqi_Zhao/"
-                        >Meiqi Zhao | JdeRobot x GSoC2023</a
+                        href="/gsoc2025-Md_Shariar_Kabir/"
+                        >Md. Shariar Kabir | JdeRobot x GSoC2025</a
                     >
                     <!-- Navbar Toggle -->
                     <button
@@ -139,7 +200,9 @@
                         <ul class="navbar-nav ml-auto flex-nowrap">
                             <!-- About -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/gsoc2023-Meiqi_Zhao/"
+                                <a
+                                    class="nav-link"
+                                    href="/gsoc2025-Md_Shariar_Kabir/"
                                     >home</a
                                 >
                             </li>
@@ -148,7 +211,7 @@
                             <li class="nav-item active">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/blog/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/blog/"
                                     >blog<span class="sr-only"
                                         >(current)</span
                                     ></a
@@ -159,21 +222,21 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/demo/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/demo/"
                                     >demo</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/roadmap/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/roadmap/"
                                     >roadmap</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/about/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/about/"
                                     >about</a
                                 >
                             </li>
@@ -204,35 +267,34 @@
 
             <div class="post">
                 <header class="post-header">
-                    <h1 class="post-title">Week 6: July 03 ~ July 09</h1>
-                    <p class="post-meta">July 9, 2023</p>
+                    <h1 class="post-title">Week 6: July 07 ~ July 13</h1>
+                    <p class="post-meta">July 13, 2025</p>
                     <p class="post-tags">
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/2023">
-                            <i class="fas fa-calendar fa-sm"></i> 2023
+                        <a href="/gsoc2025-Md_Shariar_Kabir/blog/2025">
+                            <i class="fas fa-calendar fa-sm"></i> 2025
                         </a>
-                          ·  
+                          ·       ·  
                         <a
-                            href="/gsoc2023-Meiqi_Zhao/blog/tag/imitationlearning"
-                        >
-                            <i class="fas fa-hashtag fa-sm"></i>
-                            ImitationLearning</a
-                        >
-                            ·  
-                        <a
-                            href="/gsoc2023-Meiqi_Zhao/blog/category/weeklyupdates"
+                            href="/gsoc2025-Md_Shariar_Kabir/blog/category/weeklyupdates"
                         >
                             <i class="fas fa-tag fa-sm"></i> WeeklyUpdates</a
                         >
                          
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/category/coding">
+                        <a
+                            href="/gsoc2025-Md_Shariar_Kabir/blog/category/coding"
+                        >
                             <i class="fas fa-tag fa-sm"></i> Coding</a
                         >
                          
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/category/training">
+                        <a
+                            href="/gsoc2025-Md_Shariar_Kabir/blog/category/training"
+                        >
                             <i class="fas fa-tag fa-sm"></i> Training</a
                         >
                          
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/category/evaluation">
+                        <a
+                            href="/gsoc2025-Md_Shariar_Kabir/blog/category/evaluation"
+                        >
                             <i class="fas fa-tag fa-sm"></i> Evaluation</a
                         >
                          
@@ -241,7 +303,7 @@
 
                 <article class="post-content">
                     <div id="markdown-content">
-                        <h2 id="preliminaries">Preliminaries</h2>
+                        <!-- <h2 id="preliminaries">Preliminaries</h2>
                         <p>
                             The main objective for this week is to develop more
                             sophisticated evaluation metrics beyond the existing
@@ -257,7 +319,7 @@
                             into our evaluation process, which take into account
                             route completion and traffic infractions when
                             calculating a score for model performance.
-                        </p>
+                        </p> -->
 
                         <h2 id="objectives">Objectives</h2>
                         <ul class="task-list">
@@ -267,127 +329,15 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Finish editing the demo video
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Develop advanced evaluation metrics
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Debug CARLA 0.9.14 segmentation label issue
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                />Study evaluation metrics in Behavior Metrics
+                                />Data Analysis
                             </li>
                         </ul>
 
                         <h2 id="execution">Execution</h2>
-                        <h3 id="current-models">Current models</h3>
-                        <p>
-                            Following the upgrade to CARLA 0.9.14, due to the
-                            changes in the semantic segmentation labels, we had
-                            to retrain our previous models which were initially
-                            trained under CARLA 0.9.13. Below is a summary of
-                            the current state of our models (see
-                            <a href="/gsoc2023-Meiqi_Zhao/blog/2023/week5"
-                                >previous post</a
-                            >
-                            for model architectures):
-                        </p>
-                        <center>
-                            <img
-                                src="/gsoc2023-Meiqi_Zhao/assets/img/v7_models.png"
-                                width="400"
-                            />
-                        </center>
-                        <p>
-                            By comparing v7.0 and v7.1, we aim to discern
-                            whether one-hot encoding or an embedding layer leads
-                            to superior performance. Furthermore, by comparing
-                            v7.1 and v7.2 and specifically observing the number
-                            of traffic light infractions, we can evaluate how
-                            effectively model v7.2 has learned to adhere to
-                            traffic light signals.
-                        </p>
 
                         <h3 id="evaluation-metrics">Evaluation Metrics</h3>
-                        <p>
-                            Following the scoring system of the CARLA
-                            Leaderboard, we have updated our evaluation metrics
-                            as follows:
-                        </p>
-                        <ul>
-                            <li>
-                                <strong>Driving Score</strong>: \(R_i P_i\)
-                                where \(R_i\) represents the percentage of
-                                completion of the \(i\)-th route and \(P_i\) the
-                                infraction penalty of the \(i\)−th route.
-                            </li>
-                            <li>
-                                <strong>Route Completion</strong>: This metric
-                                represents the percentage of the route
-                                completed. For each testing route, we
-                                pre-calculate the total length of the route by
-                                letting an expert agent, i.e., the CARLA
-                                autopilot, drive through the route and measure
-                                the distance traveled from start to end.
-                            </li>
-                            <li>
-                                <strong>Infraction Penalty</strong>: \(\prod_j
-                                (p_i ^j)^{\text{# of infractions}_j}\) where
-                                \(p^j\) is the penalty of infractions of type
-                                \(j\) as specified below:
-                                <ul>
-                                    <li>
-                                        Collision with walker:
-                                        <strong>0.5</strong>
-                                    </li>
-                                    <li>
-                                        Collision with other vehicle:
-                                        <strong>0.6</strong>
-                                    </li>
-                                    <li>
-                                        Collision with static objects:
-                                        <strong>0.65</strong>
-                                    </li>
-                                    <li>Timeout: <strong>0.7</strong></li>
-                                    <li>
-                                        Running a red light:
-                                        <strong>0.7</strong> The overall driving
-                                        score will be the arithmetic mean of the
-                                        driving scores of all routes.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
 
                         <h3 id="demo-video">Demo Video</h3>
-                        <p>
-                            Finally, we edited and uploaded a demo video for the
-                            Youtube channel. Check it out here:
-                        </p>
-                        <iframe
-                            width="800"
-                            height="450"
-                            src="https://www.youtube.com/embed/PsmpY6ZeT4I"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen=""
-                        ></iframe>
                     </div>
                 </article>
 
@@ -407,40 +357,22 @@
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week5/"
-                        >Week 5: June 26 ~ July 02</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week5/"
+                        >Week 5: June 30 ~ July 06</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week4/"
-                        >Week 4: June 19 ~ June 25</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week4/"
+                        >Week 4: June 23 ~ June 29</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week3/"
-                        >Week 3: June 12 ~ June 18</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week17/"
-                        >Week 17: Sep 18 ~ Sep 24</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week14/"
-                        >Week 14: Aug 28 ~ Sep 3</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week3/"
+                        >Week 3: June 16 ~ June 22</a
                     >
                 </li>
             </div>
@@ -507,7 +439,7 @@
         ></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/masonry.js"
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/masonry.js"
             type="text/javascript"
         ></script>
 
@@ -518,7 +450,10 @@
             integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
             crossorigin="anonymous"
         ></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/zoom.js"></script>
+        <script
+            defer
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/zoom.js"
+        ></script>
 
         <!-- Bootstrap Table -->
         <script
@@ -527,11 +462,14 @@
         ></script>
 
         <!-- Load Common JS -->
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/no_defer.js"></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/common.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/no_defer.js"></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/copy_code.js"
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/common.js"
+        ></script>
+        <script
+            defer
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/copy_code.js"
             type="text/javascript"
         ></script>
 
