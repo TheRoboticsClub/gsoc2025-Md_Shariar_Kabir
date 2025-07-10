@@ -152,6 +152,10 @@
             .bt {
                 border-top: 2px solid #2d2d2e;
             }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
         </style>
         <!-- Dark Mode -->
 
@@ -310,7 +314,16 @@
                         <h2 id="preliminaries">Preliminaries</h2>
                         <p>
                             This week, I focused on understanding and analyzing
-                            the dataset collected last week using the
+                            the dataset collected
+                            <a
+                                href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week5/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                last week (week-05)
+                            </a>
+
+                            using the
                             <a
                                 href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
                                 target="_blank"
@@ -318,16 +331,14 @@
                             >
                                 follow-line
                             </a>
-                            This week, I focused on understanding and analyzing
-                            the dataset collected last week using the
-                            follow-line exercise. The dataset includes images
-                            paired with corresponding linear (v) and angular (w)
-                            velocity values, which are essential for training
-                            deep learning models for autonomous control. I
-                            collected 84,969 data entries, each consisting of an
-                            image paired with corresponding action
-                            commands—specifically, linear velocity (v) and
-                            angular velocity (w). It helps a better
+                            The dataset includes images paired with
+                            corresponding linear (v) and angular (w) velocity
+                            values, which are essential for training deep
+                            learning models for autonomous control. I collected
+                            <strong>84,969</strong> data entries, each
+                            consisting of an image paired with corresponding
+                            action commands—specifically, linear velocity (v)
+                            and angular velocity (w). It helps a better
                             understanding of the structure and distribution of
                             the dataset and identifies imbalanced categories
                             that may affect model performance.
@@ -391,6 +402,7 @@
 
                         <!-- Execution -->
                         <h2 id="execution">Execution</h2>
+                        <!-- TODO: Angular Velocity -->
                         <h4 class="mt-1 mb-1">
                             Categorization of Angular Velocity (w)
                         </h4>
@@ -402,7 +414,7 @@
                             on steering behaviors rather than predicting exact
                             floating-point values.
                         </p>
-                        <p>Here are the five categories:</p>
+                        <h5 class="mt-1">Here are the five categories:</h5>
                         <ul>
                             <li>Sharp Left</li>
                             <li>Sharp Right</li>
@@ -431,15 +443,15 @@
                                     <td>-0.029841</td>
                                 </tr>
                                 <tr>
-                                    <td>Standard Deviation</td>
+                                    <td>Standard Deviation (std)</td>
                                     <td>0.376109</td>
                                 </tr>
                                 <tr>
-                                    <td>Minimum</td>
+                                    <td>Minimum (min)</td>
                                     <td>-3.5</td>
                                 </tr>
                                 <tr>
-                                    <td>Maximum</td>
+                                    <td>Maximum (max)</td>
                                     <td>3</td>
                                 </tr>
                                 <tr>
@@ -447,7 +459,7 @@
                                     <td>-0.12933</td>
                                 </tr>
                                 <tr>
-                                    <td>Median (50th Percentile)</td>
+                                    <td>Median (50%)</td>
                                     <td>-0.00237</td>
                                 </tr>
                                 <tr>
@@ -520,6 +532,135 @@
                         >
                             <img
                                 src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-6/angular_velocity_category_1.png"
+                                alt="week-6-img-1"
+                                width="100%"
+                            />
+                            <span>Angular Velocity Categories</span>
+                        </div>
+
+                        <!-- TODO: Linear Velocity -->
+                        <h4 class="mt-1 mb-1">
+                            Categorization of Linear Velocity (v)
+                        </h4>
+                        <p>
+                            I categorized the
+                            <strong>linear velocity (v)</strong> values into
+                            four(4) discrete classes based on speed and
+                            direction. This approach helps the model focus on
+                            speed behaviors rather than predicting exact
+                            floating-point values.
+                        </p>
+                        <p>
+                            The linear velocity values in the dataset range from
+                            5 to 11. I divided them into four categories, each
+                            with a range of 1.5 units. (Calculated as:
+                            <code> (11 - 5) / 4 = 1.5</code>)
+                        </p>
+                        <p>Here are the four(4) categories:</p>
+                        <ul>
+                            <li>Slow</li>
+                            <li>Moderate</li>
+                            <li>Fast</li>
+                            <li>Very Fast</li>
+                        </ul>
+
+                        <h4 class="mt-1 mb-1">
+                            Linear Velocity (v) Descriptions
+                        </h4>
+                        <table border="1" cellpadding="5" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Statistic</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Count</td>
+                                    <td>84,969</td>
+                                </tr>
+                                <tr>
+                                    <td>Mean</td>
+                                    <td>8.122210</td>
+                                </tr>
+                                <tr>
+                                    <td>Standard Deviation (std)</td>
+                                    <td>1.954871</td>
+                                </tr>
+                                <tr>
+                                    <td>Minimum (min)</td>
+                                    <td>5.000000</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum (max)</td>
+                                    <td>11.000000</td>
+                                </tr>
+                                <tr>
+                                    <td>25th Percentile</td>
+                                    <td>6.440000</td>
+                                </tr>
+                                <tr>
+                                    <td>Median (50%)</td>
+                                    <td>8.648000</td>
+                                </tr>
+                                <tr>
+                                    <td>75th Percentile</td>
+                                    <td>9.752000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-1 mb-1">
+                            Linear Velocity (v) Categories
+                        </h4>
+                        <table border="1" cellpadding="5" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Velocity Range (v)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>slow</td>
+                                    <td>Lowest speed</td>
+                                    <td>v ≤ 6.5</td>
+                                </tr>
+                                <tr>
+                                    <td>moderate</td>
+                                    <td>Moderate speed</td>
+                                    <td>6.5 &lt; v ≤ 8.0</td>
+                                </tr>
+                                <tr>
+                                    <td>fast</td>
+                                    <td>Fast speed</td>
+                                    <td>8.0 &lt; v ≤ 9.5</td>
+                                </tr>
+                                <tr>
+                                    <td>very_fast</td>
+                                    <td>Very fast</td>
+                                    <td>v &gt; 9.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4 class="mt-2 mb-1">
+                            Linear velocity (v): Data distribution among the
+                            categories
+                        </h4>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                gap: 10px;
+                                margin-top: 2rem;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-6/linear_velocity_category_v1.png"
                                 alt="week-6-img-1"
                                 width="100%"
                             />
