@@ -366,7 +366,9 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Circuit-Based Dataset Creation & Visualization
+                                />Create circuit-based datasets by splitting 3
+                                circuits for training and 1 for testing (4
+                                combinations in total)
                             </li>
                             <li class="task-list-item">
                                 <input
@@ -375,7 +377,8 @@
                                     disabled
                                     checked
                                 />
-                                Dataset Balancing
+                                Visualize angular velocity distributions in each
+                                dataset to understand steering diversity.
                             </li>
                             <li class="task-list-item">
                                 <input
@@ -384,25 +387,62 @@
                                     disabled
                                     checked
                                 />
-                                Model Training & Loss Visualization (PilotNet)
+                                Balance the datasets by applying
+                                upsampling/downsampling to maintain 5,000
+                                samples per steering class.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />
+                                Train models using the NVIDIA PilotNet
+                                architecture on each dataset.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />
+                                Visualize training and testing loss to evaluate
+                                model performance and generalization.
                             </li>
                         </ul>
 
-                        <h2 id="execution">Execution</h2>
-                        <h4 class="mt-2 mb-2"></h4>
+                        <h2 id="execution" class="mt-1">Execution</h2>
+                        <h4 class="mt-1 mb-2"></h4>
                         <p>
-                            The Follow-Line exercise in RoboticsAcademy features
-                            four distinct circuits, each with varying layouts,
-                            curves, and difficulty levels. Understanding how
-                            well a trained model performs on specific tracks can
-                            indicate its ability to generalize to previously
-                            unseen tracks. They are:
+                            The
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Follow-Line</a
+                            >
+                            exercise in RoboticsAcademy features four distinct
+                            circuits, each with varying layouts, curves, and
+                            difficulty levels. Understanding how well a trained
+                            model performs on specific tracks can indicate its
+                            ability to generalize to previously unseen tracks.
+                            They are:
                         </p>
                         <ul>
-                            <li>Simple circuit</li>
-                            <li>Montreal circuit</li>
-                            <li>Montmelo Circuit</li>
-                            <li>Nürburgring circuit</li>
+                            <ol>
+                                Simple circuit
+                            </ol>
+                            <ol>
+                                Montreal circuit
+                            </ol>
+                            <ol>
+                                Montmelo Circuit
+                            </ol>
+                            <ol>
+                                Nürburgring circuit
+                            </ol>
                         </ul>
                         <p>
                             I adopted a cross-circuit evaluation strategy by
@@ -441,7 +481,7 @@
                         >
                             [2]
                             <a
-                                href=" https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >Follow Line Exercise
