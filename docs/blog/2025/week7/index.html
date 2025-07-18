@@ -781,6 +781,75 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- TODO: balanced dataset -->
+                        <h4 class="mt-2 mb-1">Balanced Datasets</h4>
+                        <p class="mt-1 mb-2">
+                            To address the class imbalance, I applied upsampling
+                            and downsampling techniques to ensure that each
+                            dataset contained 5,000 samples per steering class.
+                            This balancing process was crucial for training the
+                            model effectively, as it allowed the model to learn
+                            from a diverse set of steering angles, including
+                            sharp turns and straight paths.
+                        </p>
+                        <p>
+                            Each dataset was balanced based on angular velocity
+                            categories (Sharp Left, Slight Left, Straight,
+                            Slight Right, Sharp Right). To ensure consistency
+                            and fairness across all training scenarios:
+                        </p>
+                        <ul>
+                            <li>I upsampled underrepresented categories</li>
+                            <li>I downsampled overrepresented ones</li>
+                        </ul>
+                        <p>
+                            to create exactly
+                            <strong>5,000 samples per class</strong>, resulting
+                            in <strong>25,000</strong> samples per dataset.
+                        </p>
+
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                margin-top: 2rem;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-7/balanced_dataset.png"
+                                alt="week-6-img-1"
+                                width="100%"
+                            />
+                            <span>Example of balanced dataset</span>
+                        </div>
+
+                        <!--  -->
+                        <p class="mt-1 mb-2">
+                            The balanced datasets were then used to train the
+                            NVIDIA PilotNet model, which is designed for
+                            autonomous driving tasks. The model architecture
+                            consists of convolutional layers for feature
+                            extraction, followed by fully connected layers for
+                            decision-making. The model was trained using the
+                            Adam optimizer with a learning rate of 0.001 and a
+                            batch size of 32. The training process involved
+                            minimizing the mean squared error (MSE) loss
+                            function, which measures the difference between the
+                            predicted and actual steering angles.
+                        </p>
+                        <p class="mt-1 mb-2">
+                            The training process was monitored using
+                            TensorBoard, which provided real-time visualizations
+                            of the training and validation loss. The model was
+                            trained for 50 epochs, with early stopping
+                            implemented to prevent overfitting. The training
+                            loss decreased steadily, indicating that the model
+                            was learning effectively from the balanced datasets.
+                        </p>
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
