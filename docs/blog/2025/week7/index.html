@@ -827,7 +827,8 @@
                             <span>Example of balanced dataset</span>
                         </div>
 
-                        <!--  -->
+                        <!-- TODO: MODEL TRAINING -->
+                        <h4 class="mt-2 mb-1">Model Training</h4>
                         <p class="mt-1 mb-2">
                             The balanced datasets were then used to train the
                             NVIDIA PilotNet model, which is designed for
@@ -835,12 +836,14 @@
                             consists of convolutional layers for feature
                             extraction, followed by fully connected layers for
                             decision-making. The model was trained using the
-                            Adam optimizer with a learning rate of 0.001 and a
-                            batch size of 32. The training process involved
+                            Adam optimizer with a learning rate of
+                            <strong>0.001</strong> and a batch size of
+                            <strong>64</strong>.
+                        </p>
+                        <!-- The training process involved
                             minimizing the mean squared error (MSE) loss
                             function, which measures the difference between the
-                            predicted and actual steering angles.
-                        </p>
+                            predicted and actual steering angles. -->
                         <p class="mt-1 mb-2">
                             The training process was monitored using
                             TensorBoard, which provided real-time visualizations
@@ -850,6 +853,103 @@
                             loss decreased steadily, indicating that the model
                             was learning effectively from the balanced datasets.
                         </p>
+                        <!-- TODO: VISUALIZATION -->
+                        <h2 class="mt-2 mb-1">Loss Visualization (PilotNet)</h2>
+                        <p>
+                            PilotNet is a convolutional neural network
+                            originally designed for end-to-end self-driving, and
+                            it fits well with our goal of mapping images to
+                            control commands.
+                        </p>
+                        <p>For each training run:</p>
+                        <ul>
+                            <li>
+                                Training loss (MSE) to observe model learning
+                                progress
+                            </li>
+                            <li>
+                                Testing loss (MSE) to evaluate generalization on
+                                unseen circuits
+                            </li>
+                            <li>
+                                Evaluation matrix to analyze prediction accuracy
+                            </li>
+                        </ul>
+                        <p>
+                            These plots helped identify overfitting,
+                            underfitting, and overall model performance for each
+                            dataset split.
+                        </p>
+
+                        <!-- TODO: IMAGES -->
+                        <h5 class="mt-2 mb-1">
+                            Loss visualization of Dataset 04 (Train:Montreal,
+                            Montmelo, Nürburgring & Test: Simple Circuit)
+                        </h5>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                gap: 10px;
+                                margin-top: 2rem;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-7/simple_circuit-loss_curve.png"
+                                alt="week-6-img-1"
+                                width="100%"
+                            />
+                            <span
+                                >Train:Montreal, Montmelo, Nürburgring & Test:
+                                Simple Circuit</span
+                            >
+                        </div>
+                        <h5 class="mt-2 mb-1">
+                            Evaluation matrix of Dataset 04 (Train:Montreal,
+                            Montmelo, Nürburgring & Test: Simple Circuit)
+                        </h5>
+                        <table
+                            border="1"
+                            cellpadding="8"
+                            cellspacing="0"
+                            style="
+                                border-collapse: collapse;
+                                text-align: center;
+                            "
+                        >
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Combined</th>
+                                    <th>Linear Velocity (v)</th>
+                                    <th>Angular Velocity (w)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>MSE</strong></td>
+                                    <td>0.7552</td>
+                                    <td>0.8866</td>
+                                    <td>0.6237</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>MAE</strong></td>
+                                    <td>0.6819</td>
+                                    <td>0.7238</td>
+                                    <td>0.6401</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>R² Score</strong></td>
+                                    <td>-0.0778</td>
+                                    <td>0.8151</td>
+                                    <td>-0.9708</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
