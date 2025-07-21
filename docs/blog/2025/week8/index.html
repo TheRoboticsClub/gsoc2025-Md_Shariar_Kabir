@@ -13,12 +13,13 @@
         />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>
-            Week 8: July 17 ~ July 23 | Meiqi Zhao | JdeRobot x GSoC2023
+            Week 8: July 21 ~ July 27 | Md. Shariar Kabir | JdeRobot x GSoC2025
         </title>
-        <meta name="author" content="JdeRobot x Google Summer of Code 2023" />
+        <meta name="author" content="JdeRobot x Google Summer of Code 2025" />
         <meta
             name="description"
-            content="Addressing the model's "
+            content="Enable NVIDIA CUDA support to run model
+                                training and inference on NVIDIA GPUs."
             halting
             issue
             at
@@ -91,13 +92,82 @@
         />
         <link
             rel="stylesheet"
-            href="/gsoc2023-Meiqi_Zhao/assets/css/main.css"
+            href="gsoc2025-Md_Shariar_Kabir/assets/css/main.css"
         />
         <link
             rel="canonical"
-            href="http://localhost:4000/gsoc2023-Meiqi_Zhao/blog/2023/week8/"
+            href="http://localhost:4000gsoc2025-Md_Shariar_Kabir/blog/2025/week8/"
         />
+        <!-- custom style -->
+        <style>
+            /* p tag text justify */
+            p {
+                text-align: justify;
+            }
+            /* Hide default checkbox appearance */
+            input[type="checkbox"].task-list-item-checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #ccc;
+                position: relative;
+                cursor: not-allowed;
+            }
 
+            /* Checked + disabled style */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked {
+                background-color: green; /* Green background */
+            }
+
+            /* White checkmark for checked box */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+            .task-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .task-list-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .task-list-item span {
+            }
+
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+
+            .bt {
+                border-top: 2px solid #2d2d2e;
+            }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+        </style>
         <!-- Dark Mode -->
 
         <link
@@ -107,8 +177,8 @@
             id="highlight_theme_dark"
         />
 
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/theme.js"></script>
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/dark_mode.js"></script>
+        <script src="gsoc2025-Md_Shariar_Kabir/assets/js/theme.js"></script>
+        <script src="gsoc2025-Md_Shariar_Kabir/assets/js/dark_mode.js"></script>
     </head>
 
     <!-- Body -->
@@ -123,8 +193,8 @@
                 <div class="container">
                     <a
                         class="navbar-brand title font-weight-lighter"
-                        href="/gsoc2023-Meiqi_Zhao/"
-                        >Meiqi Zhao | JdeRobot x GSoC2023</a
+                        href="gsoc2025-Md_Shariar_Kabir/"
+                        >Md. Shariar Kabir | JdeRobot x GSoC2025</a
                     >
                     <!-- Navbar Toggle -->
                     <button
@@ -149,7 +219,9 @@
                         <ul class="navbar-nav ml-auto flex-nowrap">
                             <!-- About -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/gsoc2023-Meiqi_Zhao/"
+                                <a
+                                    class="nav-link"
+                                    href="gsoc2025-Md_Shariar_Kabir/"
                                     >home</a
                                 >
                             </li>
@@ -158,7 +230,7 @@
                             <li class="nav-item active">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/blog/"
+                                    href="gsoc2025-Md_Shariar_Kabir/blog/"
                                     >blog<span class="sr-only"
                                         >(current)</span
                                     ></a
@@ -169,21 +241,21 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/demo/"
+                                    href="gsoc2025-Md_Shariar_Kabir/demo/"
                                     >demo</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/roadmap/"
+                                    href="gsoc2025-Md_Shariar_Kabir/roadmap/"
                                     >roadmap</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/about/"
+                                    href="gsoc2025-Md_Shariar_Kabir/about/"
                                     >about</a
                                 >
                             </li>
@@ -215,34 +287,38 @@
             <div class="post">
                 <header class="post-header">
                     <h1 class="post-title">Week 8: July 17 ~ July 23</h1>
-                    <p class="post-meta">July 24, 2023</p>
+                    <p class="post-meta">July 24, 2025</p>
                     <p class="post-tags">
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/2023">
-                            <i class="fas fa-calendar fa-sm"></i> 2023
+                        <a href="gsoc2025-Md_Shariar_Kabir/blog/2025">
+                            <i class="fas fa-calendar fa-sm"></i> 2025
                         </a>
                           ·  
                         <a
-                            href="/gsoc2023-Meiqi_Zhao/blog/tag/imitationlearning"
+                            href="gsoc2025-Md_Shariar_Kabir/blog/tag/imitationlearning"
                         >
                             <i class="fas fa-hashtag fa-sm"></i>
                             ImitationLearning</a
                         >
                          
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/tag/finetuning">
+                        <a href="gsoc2025-Md_Shariar_Kabir/blog/tag/finetuning">
                             <i class="fas fa-hashtag fa-sm"></i> Finetuning</a
                         >
                             ·  
                         <a
-                            href="/gsoc2023-Meiqi_Zhao/blog/category/weeklyupdates"
+                            href="gsoc2025-Md_Shariar_Kabir/blog/category/weeklyupdates"
                         >
                             <i class="fas fa-tag fa-sm"></i> WeeklyUpdates</a
                         >
                          
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/category/training">
+                        <a
+                            href="gsoc2025-Md_Shariar_Kabir/blog/category/training"
+                        >
                             <i class="fas fa-tag fa-sm"></i> Training</a
                         >
                          
-                        <a href="/gsoc2023-Meiqi_Zhao/blog/category/evaluation">
+                        <a
+                            href="gsoc2025-Md_Shariar_Kabir/blog/category/evaluation"
+                        >
                             <i class="fas fa-tag fa-sm"></i> Evaluation</a
                         >
                          
@@ -252,15 +328,9 @@
                 <article class="post-content">
                     <div id="markdown-content">
                         <h2 id="preliminaries">Preliminaries</h2>
-                        <p>
-                            This week we focused on addressing the “halting”
-                            problem in the latest model we observed from last
-                            week. The problem occurs the most frequently when
-                            the vehicle is making a turn at intersections where
-                            they would suddenly stop in the middle of the road
-                            and get stuck in that state.
-                        </p>
+                        <p></p>
 
+                        <!-- TODO: OBJECTIVE -->
                         <h2 id="objectives">Objectives</h2>
                         <ul class="task-list">
                             <li class="task-list-item">
@@ -269,9 +339,9 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Experiment with adding more meaningful data,
-                                adding more modalities etc to address the
-                                halting problem
+                                />
+                                Enable NVIDIA CUDA support to run model training
+                                and inference on NVIDIA GPUs.
                             </li>
                             <li class="task-list-item">
                                 <input
@@ -279,185 +349,32 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Finish installing Behavior Metrics
+                                />
+                                Evaluate models performance with real-time
+                                follow-line exercise.
                             </li>
                         </ul>
-
+                        <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
-                        <h3 id="efficient-data-collection">
-                            Efficient data collection
-                        </h3>
-                        <p>
-                            The solution to most problems in the realm of
-                            machine learning lies in more data. In research
-                            settings, autonomous driving tasks often require
-                            dozens to hundreds of hours of driving data. Given
-                            computational limitations, we’re currently
-                            collecting under 100 episodes of training data in
-                            the CARLA simulator, amassing a few hours of driving
-                            at most. Therefore, we need to make our data
-                            collection process as efficient and effective as
-                            possible. This week, we explored the following ways
-                            to optimize data collection:
-                        </p>
-                        <ul>
-                            <li>
-                                <strong>Data Trimming</strong>: A typical
-                                episode in the training set usually involves the
-                                agent waiting at the intersection for a long
-                                time. We removed segments where the vehicle
-                                stops and the throttle remains below 0.01 after
-                                more than 50 frames. This step helps eliminate
-                                redundant data and increases the effectiveness
-                                of our dataset. (<strong
-                                    >Update: NOT a good idea</strong
-                                >, see
-                                <a href="/gsoc2023-Meiqi_Zhao/blog/2023/week12"
-                                    >week 12</a
-                                >)
-                            </li>
-                            <li>
-                                <strong>Data prioritization</strong>: Certain
-                                tasks, such as making turns at intersections and
-                                obstacle avoidance, are more complex and
-                                crucial. Therefore, we should prioritize these
-                                scenarios in our data collection.
-                            </li>
-                            <li>
-                                <strong>Selective Data Retention</strong>: After
-                                the initial training, we can analyze the
-                                scenarios where the model underperforms, and
-                                focus on collecting and retaining more data that
-                                reflects these scenarios.
-                            </li>
-                        </ul>
 
-                        <h3 id="finetuning-on-junction-only-dataset">
-                            Finetuning on Junction-Only Dataset
-                        </h3>
-                        <p>
-                            In previous week, our observation was that the model
-                            often stops suddenly in the middle of making a turn
-                            at an intersection. By collecting additional
-                            episodes that specifically targeted junctions, we
-                            were able to create a “junction-only” dataset. This
-                            allowed us to finetune the model to hopefully better
-                            learn the nuances of navigating intersections from
-                            the additional data. The image below illustrates a
-                            few examples of the data collected.
-                        </p>
-                        <center>
-                            <img
-                                src="/gsoc2023-Meiqi_Zhao/assets/img/junctions_data_collection.gif"
-                                width="400"
-                            />
-                        </center>
-
-                        <p>
-                            The video below demonstrates an example of vehicle
-                            successfully making a left turn after finetuning.
-                        </p>
-                        <center>
-                            <iframe
-                                src="https://drive.google.com/file/d/1HGh6hiu3nq49x0F14oAKhwQQtC0nIPuZ/preview"
-                                width="560"
-                                height="400"
-                                allow="autoplay"
-                            ></iframe>
-                        </center>
-                        <p>
-                            However, even after finetuning. Some problems
-                            persist. The next video shows a failed example where
-                            the vehicle goes straight at an intersection despite
-                            the “Turn Left” command.
-                        </p>
-                        <center>
-                            <iframe
-                                src="https://drive.google.com/file/d/1zLqXFHLEUZsSmiFUDuwplV_PmJbhexcF/preview"
-                                width="560"
-                                height="400"
-                                allow="autoplay"
-                            ></iframe>
-                        </center>
-
-                        <p>
-                            Overall, there is some improvement and the agent
-                            seems to get stuck less at intersections after
-                            finetuning. To truly evaluate the effectiveness of
-                            the finetuning, especially in terms of the success
-                            rate of making turns, we need to develop a mechanism
-                            for detecting whether the agent successfully makes a
-                            turn or not, which is lacking in our current
-                            evaluation process. (<strong>Update</strong>:
-                            turning detection implemented in
-                            <a href="/gsoc2023-Meiqi_Zhao/blog/2023/week9"
-                                >week 9</a
-                            >)
-                        </p>
-
-                        <h3 id="data-aggregation-dagger">
-                            Data Aggregation (DAgger)
-                        </h3>
-                        <p>
-                            Another technique that we plan to try in the
-                            following week is called Data
-                            Aggregation(DAgger)[1]. DAgger is an iterative
-                            algorithm designed to improve the performance of
-                            machine learning models, particularly imitation
-                            learning. Traditional imitation learning can
-                            sometimes lead to a problem known as “distributional
-                            shift,” where a trained model, when put into
-                            practice, might encounter states that were not
-                            well-represented in the initial training data. This
-                            discrepancy can result in suboptimal or incorrect
-                            actions by the model.
-                        </p>
-
-                        <p>
-                            DAgger addresses this issue by iteratively training
-                            the model with a combination of its own behavior and
-                            expert guidance. By repeatedly collecting the states
-                            that the policy experiences and querying an expert
-                            for the correct actions, DAgger continually refines
-                            the training dataset and the policy. This approach
-                            helps the model to generalize better to unseen
-                            states, aligning more closely with the expert’s
-                            performance.
-                        </p>
-
-                        <p>
-                            In the context of our project, the steps to apply
-                            DAgger can be outlined as follows:
-                        </p>
-
-                        <ol>
-                            <li>
-                                Initialize dataset D with autopilot expert
-                                demonstrations
-                            </li>
-                            <li>Train policy on D</li>
-                            <li>
-                                Run trained policy in the simulator: only save
-                                the states that the policy sees, not the actions
-                                it takes.
-                            </li>
-                            <li>
-                                Ask the expert for actions: For each state in
-                                the newly generated trajectory, query the expert
-                                what action they would take
-                            </li>
-                            <li>Add the new state-action pairs to D</li>
-                            <li>Retrain policy on D</li>
-                            <li>Repeat steps 3-6 for a number of iterations</li>
-                        </ol>
-
-                        <h2 id="references">References</h2>
-                        <p>
-                            [1] Stephane Ross, Geoffrey J. Gordon, and Drew
-                            Bagnell. A reduction of imitation learning and
-                            structured prediction to no-regret online learning.
-                            In Conference on Artificial Intelligence and
-                            Statistics (AISTATS), 2011.
+                        <!-- TODO: REFENERCE -->
+                        <h2 id="references" style="margin-top: 2rem">
+                            References
+                        </h2>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [1]
+                            <a
+                                href="https://developer.nvidia.com/blog/researching-and-developing-an-autonomous-vehicle-lane-following-system/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >NVIDIA PilotNet</a
+                            >
                         </p>
                     </div>
                 </article>
@@ -478,40 +395,29 @@
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week9/"
-                        >Week 9: July 24 ~ July 30</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week7/"
+                        >Week 7: July 14 ~ July 20</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week3/"
-                        >Week 3: June 12 ~ June 18</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week6/"
+                        >Week 6: July 07 ~ July 13</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week18/"
-                        >GSoC 2023: Project Recap</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week5/"
+                        >Week 5: June 30 ~ July 06</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/community-bonding-week-2/"
-                        >Community Bonding: May 22 ~ May 28</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week12/"
-                        >Week 12~13: Aug 14 ~ Aug 27</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week4/"
+                        >Week 4: June 23 ~ June 29</a
                     >
                 </li>
             </div>
@@ -578,7 +484,7 @@
         ></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/masonry.js"
+            src="gsoc2025-Md_Shariar_Kabir/assets/js/masonry.js"
             type="text/javascript"
         ></script>
 
@@ -589,7 +495,10 @@
             integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
             crossorigin="anonymous"
         ></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/zoom.js"></script>
+        <script
+            defer
+            src="gsoc2025-Md_Shariar_Kabir/assets/js/zoom.js"
+        ></script>
 
         <!-- Bootstrap Table -->
         <script
@@ -598,11 +507,14 @@
         ></script>
 
         <!-- Load Common JS -->
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/no_defer.js"></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/common.js"></script>
+        <script src="gsoc2025-Md_Shariar_Kabir/assets/js/no_defer.js"></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/copy_code.js"
+            src="gsoc2025-Md_Shariar_Kabir/assets/js/common.js"
+        ></script>
+        <script
+            defer
+            src="gsoc2025-Md_Shariar_Kabir/assets/js/copy_code.js"
             type="text/javascript"
         ></script>
 
