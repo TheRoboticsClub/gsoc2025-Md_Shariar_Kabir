@@ -320,8 +320,46 @@
 
                 <article class="post-content">
                     <div id="markdown-content">
+                        <!-- TODO: Preliminaries -->
                         <h2 id="preliminaries">Preliminaries</h2>
-                        <p></p>
+                        <p>
+                            In Week 8 of my GSoC journey, I focused on enabling
+                            GPU acceleration for deep learning tasks inside the
+                            <a
+                                href="https://hub.docker.com/r/jderobot/robotics-academy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RoboticsAcademy Docker Image (RADI)</a
+                            >
+                            . Since training and inference using
+                            <a
+                                href="https://pytorch.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PyTorch</a
+                            >
+                            can be computationally expensive, especially for
+                            real-time simulations, enabling
+                            <a
+                                href="https://developer.nvidia.com/cudnn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >NVIDIA CUDA and cuDNN</a
+                            >
+                            support inside the container is essential for faster
+                            and more efficient model execution.
+                        </p>
+                        <p>
+                            Additionally, I tested the newly released version of
+                            <a
+                                href="https://github.com/JdeRobot/RoboticsAcademy/releases/tag/v5.8.0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RADI (v5.8.0)</a
+                            >, identified some bugs related to dependencies and
+                            model execution, and contributed by creating pull
+                            requests to fix these issues.
+                        </p>
 
                         <!-- TODO: OBJECTIVE -->
                         <h2 id="objectives">Objectives</h2>
@@ -345,19 +383,37 @@
                                 Testing newly released RADI and PRs for bug
                                 fixes.
                             </li>
-                            <li class="task-list-item">
+                            <!--<li class="task-list-item">
                                 <input
                                     type="checkbox"
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
                                 />
-                                <!-- Evaluate models performance with real-time
-                                follow-line exercise. -->
-                            </li>
+                                Evaluate models performance with real-time
+                                follow-line exercise. 
+                            </li>-->
                         </ul>
                         <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                gap: 10px;
+                                margin-top: 2rem;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-8/week-08-diagram-1.png.png"
+                                alt="week-6-img-1"
+                                width="100%"
+                            />
+                            <span>Figure of DL execution</span>
+                        </div>
 
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
@@ -372,10 +428,55 @@
                         >
                             [1]
                             <a
-                                href="https://developer.nvidia.com/blog/researching-and-developing-an-autonomous-vehicle-lane-following-system/"
+                                href="https://hub.docker.com/r/jderobot/robotics-academy"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                >NVIDIA PilotNet</a
+                                >RoboticsAcademy Docker Image (RADI)</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [2]
+                            <a
+                                href="https://pytorch.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PyTorch</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [3]
+                            <a
+                                href="https://developer.nvidia.com/cudnn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >NVIDIA CUDA and cuDNN</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [4]
+                            <a
+                                href="https://github.com/JdeRobot/RoboticsAcademy/releases/tag/v5.8.0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RADI (v5.8.0)</a
                             >
                         </p>
                     </div>
