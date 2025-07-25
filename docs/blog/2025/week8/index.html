@@ -404,6 +404,61 @@
                         </ul>
                         <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
+                        <h4 class="mt-1 mb-1">
+                            Enabling GPU Acceleration with PyTorch
+                        </h4>
+                        <p>
+                            To accelerate deep learning workloads in
+                            RoboticsAcademy, I worked on enabling CUDA and cuDNN
+                            support inside the official RADI (RoboticsAcademy
+                            Docker Image). GPU-based tasks like training or
+                            running PyTorch models require explicit CUDA and
+                            cuDNN installation, which was not pre-configured in
+                            the existing RADI setup.
+                        </p>
+                        <p>
+                            Instead, we installed the CUDA and cuDNN packages
+                            provided by NVIDIA. We leverage this feature through
+                            PyTorch.
+                        </p>
+                        <p class="mt-1">To enable this:</p>
+                        <ul>
+                            <li>
+                                I installed the PyTorch GPU version inside the
+                                Docker container using pip with the appropriate
+                                CUDA runtime version.
+                            </li>
+                            <li>
+                                I verified CUDA and cuDNN compatibility inside
+                                the container
+                            </li>
+                            <li>
+                                Ran validation tests such as
+                                <code>torch.cuda.is_available()</code>.
+                            </li>
+                        </ul>
+                        <p class="mt-1">
+                            In RoboticsAcademy deep learning exercises, such as
+                            the Human Detection and Digit Classification tasks,
+                            the input deep learning models are expected in the
+                            ONNX (Open Neural Network Exchange) format. However,
+                            PyTorch does not natively support executing ONNX
+                            models directly.
+                        </p>
+                        <p>
+                            To address this, I installed the onnx and
+                            onnx2pytorch Python packages. These tools allow me
+                            to load ONNX models and convert them into a format
+                            compatible with PyTorch, enabling inference and
+                            integration within the exercise pipeline. This setup
+                            ensures that pre-trained models in ONNX format can
+                            be seamlessly used in RoboticsAcademy simulations.
+                        </p>
+                        <p class="mt-1">
+                            The diagram provides a clear understanding of the
+                            execution flow of the operation.
+                        </p>
+                        <!-- image -->
                         <div
                             style="
                                 display: flex;
@@ -420,8 +475,24 @@
                                 alt="week-8-img-1"
                                 width="100%"
                             />
-                            <span>Figure of DL execution</span>
+                            <!-- <span>Figure of DL execution</span> -->
                         </div>
+                        <p class="mt-2 mb-1">
+                            We created another video demonstrating the
+                            Follow-Line exercise running with a deep learning
+                            model implemented in PyTorch, utilizing GPU
+                            acceleration through CUDA.
+                        </p>
+                        <iframe
+                            width="800"
+                            height="450"
+                            src="https://www.youtube.com/embed/j96Y3rYVmII?si=kvv5-HyKEc2DoCyk"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
 
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
