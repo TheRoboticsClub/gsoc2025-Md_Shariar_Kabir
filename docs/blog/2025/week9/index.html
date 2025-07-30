@@ -13,12 +13,13 @@
         />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>
-            Week 9: July 28 ~ August 3 | Md. Shariar kabir | JdeRobot x GSoC2025
+            Week 9: July 28 ~ August 03 | Md. Shariar kabir | JdeRobot x
+            GSoC2025
         </title>
         <meta name="author" content="JdeRobot x Google Summer of Code 2025" />
         <meta
             name="description"
-            content="Robust and Stable GPU acceleration solution."
+            content="Optimizing GPU Acceleration in RADI Through a Robust and Stable Solution."
         />
         <meta
             name="keywords"
@@ -88,6 +89,76 @@
             href="http://localhost:4000/gsoc2025-Md_Shariar_Kabir/blog/2025/week9/"
         />
 
+        <!-- custom style -->
+        <style>
+            /* p tag text justify */
+            p {
+                text-align: justify;
+            }
+            /* Hide default checkbox appearance */
+            input[type="checkbox"].task-list-item-checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #ccc;
+                position: relative;
+                cursor: not-allowed;
+            }
+
+            /* Checked + disabled style */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked {
+                background-color: green; /* Green background */
+            }
+
+            /* White checkmark for checked box */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+            .task-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .task-list-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .task-list-item span {
+            }
+
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+
+            .bt {
+                border-top: 2px solid #2d2d2e;
+            }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+        </style>
         <!-- Dark Mode -->
 
         <link
@@ -202,7 +273,7 @@
                 <header class="post-header">
                     <h1 class="post-title">Week 9: July 28 ~ August 03</h1>
                     <p class="post-meta">August 03, 2025</p>
-                    <p class="post-tags">
+                    <!-- <p class="post-tags">
                         <a href="/gsoc2025-Md_Shariar_Kabir/blog/2025">
                             <i class="fas fa-calendar fa-sm"></i> 2025
                         </a>
@@ -242,7 +313,7 @@
                             <i class="fas fa-tag fa-sm"></i> Evaluation</a
                         >
                          
-                    </p>
+                    </p> -->
                 </header>
 
                 <article class="post-content">
@@ -252,9 +323,59 @@
 
                         <!-- TODO: OBJECTIVES -->
                         <h2 id="objectives">Objectives</h2>
-
+                        <ul class="task-list">
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />
+                                Test and debug ONNX model loading using the
+                                onnx2pytorch package.
+                            </li>
+                        </ul>
                         <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
+                        <h4 class="mt-1 mb-1">
+                            Test and debug ONNX model loading using the
+                            onnx2pytorch package
+                        </h4>
+                        <p class="mt-1 mb-1">
+                            In Week 08, I enabled GPU acceleration in the
+                            RoboticsAcademy Docker Image (RADI) using the
+                            onnx2pytorch package. Our ultimate goal is to
+                            provide stable and robust GPU acceleration within
+                            RADI, which will support deep learning-based
+                            exercises such as digit classification, human
+                            detection, and end-to-end visual control of an
+                            autonomous vehicle.
+                        </p>
+                        <p class="mt-1 mb-2">
+                            To move toward this objective, I loaded existing
+                            ONNX models using the onnx2pytorch package, which we
+                            began integrating last week. In general, the models
+                            loaded successfully, though some emitted
+                            non-critical warnings that appear to be ignorable.
+                        </p>
+                        <h5 class="mb-1">Ignorable warnings:</h5>
+                        <!-- image -->
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                gap: 10px;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-1.png"
+                                alt="week-9-img-1"
+                                width="100%"
+                            />
+                        </div>
 
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
