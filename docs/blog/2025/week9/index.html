@@ -338,21 +338,8 @@
                         <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
                         <h4 class="mt-1 mb-1">
-                            Test and debug
-                            <a
-                                href="https://onnx.ai/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >Open Neural Network Exchange (ONNX)</a
-                            >
-                            model loading using the
-                            <a
-                                href="https://pypi.org/project/onnx2pytorch/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><code>onnx2pytorch</code></a
-                            >
-                            package
+                            Test and debug ONNX model loading using the
+                            onnx2pytorch package
                         </h4>
                         <p class="mt-1 mb-1">
                             In
@@ -391,9 +378,22 @@
                         </p>
                         <p class="mt-1 mb-1">
                             To move toward this objective, I loaded existing
-                            ONNX models using the onnx2pytorch package, which we
-                            began integrating last week. In general, the models
-                            loaded successfully, though some emitted
+                            <a
+                                href="https://onnx.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Open Neural Network Exchange (ONNX)</a
+                            >
+                            models using the
+                            <a
+                                href="https://pypi.org/project/onnx2pytorch/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><code>onnx2pytorch</code></a
+                            >
+                            package, which we began integrating last week. In
+                            general, the models loaded successfully, though some
+                            emitted
                             <strong style="color: #eed202 !important"
                                 >non-critical warnings</strong
                             >
@@ -437,7 +437,9 @@
                             converts ONNX models to <strong>PyTorch</strong>, I
                             encountered the following error:
                         </p>
-                        <code>Conversion not implemented for op_type=If </code>
+                        <code class="mt-1 mb-1"
+                            >Conversion not implemented for op_type=If
+                        </code>
                         <div
                             style="
                                 display: flex;
