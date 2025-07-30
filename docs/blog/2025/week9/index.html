@@ -339,26 +339,70 @@
                         <h2 id="execution">Execution</h2>
                         <h4 class="mt-1 mb-1">
                             Test and debug ONNX model loading using the
-                            onnx2pytorch package
+                            <a
+                                href="https://pypi.org/project/onnx2pytorch/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><code>onnx2pytorch</code></a
+                            >
+                            package
                         </h4>
                         <p class="mt-1 mb-1">
-                            In Week 08, I enabled GPU acceleration in the
-                            RoboticsAcademy Docker Image (RADI) using the
-                            onnx2pytorch package. Our ultimate goal is to
-                            provide stable and robust GPU acceleration within
-                            RADI, which will support deep learning-based
-                            exercises such as digit classification, human
-                            detection, and end-to-end visual control of an
-                            autonomous vehicle.
+                            In
+                            <a
+                                href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week8/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Week 08</a
+                            >
+                            , I enabled GPU acceleration in the
+                            <a
+                                href="https://hub.docker.com/r/jderobot/robotics-academy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RoboticsAcademy Docker Image (RADI)</a
+                            >
+                            using the <strong>onnx2pytorch</strong> package. Our
+                            ultimate goal is to provide stable and robust GPU
+                            acceleration within <strong>RADI</strong>, which
+                            will support deep learning-based exercises such as
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/human_detection"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Human Detection</a
+                            >
+                            ,
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/digit_classification"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Digit Classification</a
+                            >
+                            , and end-to-end visual control of an autonomous
+                            vehicle.
                         </p>
-                        <p class="mt-1 mb-2">
+                        <p class="mt-1 mb-1">
                             To move toward this objective, I loaded existing
                             ONNX models using the onnx2pytorch package, which we
                             began integrating last week. In general, the models
                             loaded successfully, though some emitted
-                            non-critical warnings that appear to be ignorable.
+                            <strong style="color: #eed202 !important"
+                                >non-critical warnings</strong
+                            >
+                            that appear to be ignorable.
                         </p>
-                        <h5 class="mb-1">Ignorable warnings:</h5>
+                        <p class="mt-1 mb-2">
+                            However, we also encountered a few
+                            <strong>compatibility issues</strong> during
+                            testing. These issues may impact the reliability and
+                            portability of the solution and need to be addressed
+                            before full integration. Below are some of the
+                            problems we identified:
+                        </p>
+                        <h5 class="mb-1" style="color: #eed202 !important">
+                            Ignorable warnings:
+                        </h5>
                         <!-- image -->
                         <div
                             style="
@@ -377,6 +421,40 @@
                             />
                         </div>
 
+                        <h5 class="mt-1 mb-1" style="color: #ff2c2c !important">
+                            Unsupported Ops:
+                        </h5>
+                        <p class="mb-1">
+                            While testing the <strong>ONNX</strong> model using
+                            the <strong>onnx2pytorch</strong> package, which
+                            converts ONNX models to <strong>PyTorch</strong>, I
+                            encountered the following error:
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                gap: 10px;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-2.png"
+                                alt="week-9-img-1"
+                                width="100%"
+                            />
+                        </div>
+                        <p class="mt-1 mb-1">
+                            The op_type=If issue reflects a common tension
+                            between static vs. dynamic computation graphs. ONNX
+                            sits somewhere in the middle, and while ONNX Runtime
+                            handles both, conversion to PyTorch (a mostly static
+                            graph approach with nn.Module) can't easily
+                            translate conditional paths.
+                        </p>
+
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
@@ -394,6 +472,51 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >RoboticsAcademy Docker Image (RADI)</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [2]
+                            <a
+                                href="https://pypi.org/project/onnx2pytorch/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >onnx2pytorch package</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [3]
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/human_detection"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Human Detection Exercise</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [4]
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/digit_classification"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Digit Classification Exercise</a
                             >
                         </p>
                     </div>
