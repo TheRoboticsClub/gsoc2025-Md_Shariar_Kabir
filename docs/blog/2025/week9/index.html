@@ -337,10 +337,12 @@
                         </ul>
                         <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
+                        <!-- TODO: DRAW BACK OF ONNX2PYTORCH    -->
                         <h4 class="mt-1 mb-1">
                             Test and debug ONNX model loading using the
                             onnx2pytorch package
                         </h4>
+
                         <p class="mt-1 mb-1">
                             In
                             <a
@@ -457,13 +459,38 @@
                             />
                         </div>
                         <p class="mt-1 mb-1">
-                            The op_type=If issue reflects a common tension
-                            between static vs. dynamic computation graphs. ONNX
-                            sits somewhere in the middle, and while ONNX Runtime
-                            handles both, conversion to PyTorch (a mostly static
-                            graph approach with nn.Module) can't easily
-                            translate conditional paths.
+                            The <code>op_type=If</code> issue reflects a common
+                            tension between static vs. dynamic computation
+                            graphs. ONNX sits somewhere in the middle, and while
+                            ONNX Runtime handles both, conversion to PyTorch (a
+                            mostly static graph approach with
+                            <code>nn.Module</code> ) can't easily translate
+                            conditional paths.
                         </p>
+
+                        <h5>Summary: Issue with onnx2pytorch Package</h5>
+                        <p>
+                            We initially attempted to convert ONNX models to
+                            PyTorch using the <code>onnx2pytorch</code> library.
+                            While it worked with basic models, it failed to load
+                            our custom <code>ONNX</code> model, likely due to
+                            unsupported operators or internal conversion bugs.
+                        </p>
+                        <ul>
+                            <li>
+                                Observed exceptions and incorrect graph parsing.
+                            </li>
+                            <li>
+                                Realized <code>onnx2pytorch</code> lacks full
+                                support for complex or dynamic ONNX graphs.
+                            </li>
+                            <li>
+                                This prompted us to seek a more stable and
+                                production-ready alternative.
+                            </li>
+                        </ul>
+
+                        <h4 class="mt-2 mb-1"></h4>
 
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
