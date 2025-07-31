@@ -611,7 +611,7 @@
                             </li>
                         </ul>
                         <!-- TODO: VERIFY ONNX DEBUG AND PROVIDER OUTPUT -->
-                        <h5>
+                        <h5 class="mt-2">
                             💻 Using ONNX Runtime GPU with PyTorch and CUDA
                             Support for Accelerated Inference (Solution 02:
                             Preferred Setup)
@@ -636,23 +636,27 @@
                             <code>onnxruntime.preload_dlls()</code> function.
                         </p>
                         <p>Example 1: Importing PyTorch</p>
-                        <code>
-                            # Import torch will preload necessary DLLs. It need
-                            to be done before creating session. import torch
-                            import onnxruntime # Create an inference session
-                            with CUDA execution provider session =
-                            onnxruntime.InferenceSession("model.onnx",
+                        <pre><code>
+                        # Import torch will preload necessary DLLs. It needs
+                        # to be done before creating session.
+                        import torch
+                        import onnxruntime
+
+                        # Create an inference session with CUDA execution provider
+                        session = onnxruntime.InferenceSession("model.onnx",
                             providers=["CUDAExecutionProvider"])
-                        </code>
+                        </code></pre>
 
                         <p>Example 2: Using preload_dlls Function</p>
-                        <code>
-                            import onnxruntime # Preload necessary DLLs
-                            onnxruntime.preload_dlls() # Create an inference
-                            session with CUDA execution provider session =
-                            onnxruntime.InferenceSession("model.onnx",
-                            providers=["CUDAExecutionProvider"])
-                        </code>
+                        <pre><code>
+                            import onnxruntime
+                            # Preload necessary DLLs
+                            onnxruntime.preload_dlls()
+
+                            # Create an inference session with CUDA execution provider
+                            session = onnxruntime.InferenceSession("model.onnx",
+                                providers=["CUDAExecutionProvider"])
+                            </code></pre>
 
                         <!-- TODO: SUMMARY -->
                         <h5>Summary:</h5>
