@@ -703,7 +703,7 @@
                             />
                         </div>
 
-                        <p class="mb-1">2. Verify ONNX Runtime Uses GPU</p>
+                        <p class="mb-1 mt-1">2. Verify ONNX Runtime Uses GPU</p>
                         <div
                             style="
                                 display: flex;
@@ -720,7 +720,7 @@
                                 style="border-radius: 10px 0 0 10px"
                             />
                         </div>
-                        <p class="mb-1">3. Monitoring GPU Usages</p>
+                        <p class="mb-1 mt-1">3. Monitoring GPU Usages</p>
                         <code>watch nvidia-smi</code>
                         <div
                             style="
@@ -739,7 +739,51 @@
                             />
                         </div>
 
-                        <p class="mb-1">4. Compare Speed (CPU vs GPU)</p>
+                        <p class="mb-1 mt-1">4. Compare Speed (CPU vs GPU)</p>
+                        <p class="mb-2">
+                            After verifying the versions and confirming CUDA
+                            availability, I processed
+                            <strong>17,000</strong>
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >follow-line exercise</a
+                            >
+                            images using both CPU and GPU modes. The performance
+                            difference is shown below:
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-10-code-6.png"
+                                alt="week-9-img-6"
+                                width="100%"
+                                style="border-radius: 10px 0 0 10px"
+                            />
+                        </div>
+                        <p class="mt-1 mb-1">
+                            The GPU mode is significantly faster, processing all
+                            the <strong>17,000</strong> images in
+                            <code>45.95</code> seconds compared to
+                            <code>85.90</code> seconds on CPU.
+                        </p>
+                        <p class="mb-1">
+                            This confirms that the ONNX Runtime is correctly
+                            utilizing the GPU for inference, providing a
+                            substantial performance boost over CPU execution.
+                        </p>
+                        <p class="mb-1">
+                            This solution is now the standard setup for future
+                            RoboticsAcademy DL exercises that use ONNX models.
+                        </p>
 
                         <!-- TODO: SUMMARY -->
                         <h5>🏷️ Summary:</h5>
@@ -878,6 +922,21 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >PyTorch</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [9]
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >follow-line exercise</a
                             >
                         </p>
                     </div>
