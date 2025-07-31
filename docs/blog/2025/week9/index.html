@@ -291,7 +291,7 @@
                                     checked
                                 />
                                 ONNX Model Testing and Debugging Using
-                                onnx2pytorch (last week solution)
+                                onnx2pytorch (last week solution).
                             </li>
                             <li class="task-list-item">
                                 <input
@@ -310,7 +310,7 @@
                                     disabled
                                     checked
                                 />
-                                Install PyTorch with GPU support inside the
+                                Install PyTorch with CUDA support inside the
                                 container and verify its functionality.
                             </li>
                         </ul>
@@ -454,9 +454,15 @@
                         <h5>Summary: Issue with onnx2pytorch Package</h5>
                         <p>
                             We initially attempted to convert ONNX models to
-                            PyTorch using the <code>onnx2pytorch</code> library.
-                            While it worked with basic models, it failed to load
-                            our custom <code>ONNX</code> model, likely due to
+                            <a
+                                href="https://pytorch.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PyTorch</a
+                            >
+                            using the <code>onnx2pytorch</code> library. While
+                            it worked with basic models, it failed to load our
+                            custom <code>ONNX</code> model, likely due to
                             unsupported operators or internal conversion bugs.
                         </p>
                         <ul>
@@ -534,7 +540,22 @@
                                 container.
                             </li>
                             <li>
-                                Manually installing CUDA Toolkit and cuDNN
+                                Manually installing
+                                <a
+                                    href="https://developer.nvidia.com/cuda-toolkit"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    CUDA Toolkit
+                                </a>
+                                and
+                                <a
+                                    href="https://developer.nvidia.com/cudnn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    cuDNN
+                                </a>
                                 inside the Docker image to enable GPU support.
                             </li>
                         </ol>
@@ -678,6 +699,53 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >Open Neural Network Exchange (ONNX)</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [6]
+                            <a
+                                href="https://developer.nvidia.com/cuda-toolkit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                CUDA Toolkit
+                            </a>
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [7]
+                            <a
+                                href="https://developer.nvidia.com/cudnn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                cuDNN
+                            </a>
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [8]
+                            <a
+                                href="https://pytorch.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PyTorch</a
                             >
                         </p>
                     </div>
