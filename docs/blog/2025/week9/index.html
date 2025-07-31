@@ -850,7 +850,69 @@
                             all four models to assess their performance and
                             generalization.
                         </p>
+                        <p class="mb-2">
+                            This week, I evaluated four deep learning models
+                            using the Follow-Line exercise in RoboticsAcademy,
+                            which features four unique circuits. Each model was
+                            tested on a circuit it had not previously seen
+                            during training, ensuring that the evaluation was
+                            performed on truly unseen data. For each test, one
+                            circuit was reserved exclusively as the test dataset
+                            while the model was trained on data from the other
+                            three circuits. This approach allowed for a rigorous
+                            assessment of the models' generalization
+                            capabilities across different environments.
+                        </p>
 
+                        <!-- TODO: TEST 01 -->
+                        <div>
+                            <h5>Test 01:</h5>
+                            <p><strong>Test Circuit:</strong> Simple Circuit</p>
+                            <p>
+                                <strong>Train Dataset:</strong> Montreal,
+                                Montmelo, Nürburgring Circuit
+                            </p>
+                            <p><strong>Test:</strong> Simple Circuit</p>
+                        </div>
+
+                        <!-- TODO: TEST 02 -->
+                        <div>
+                            <h5>Test 02:</h5>
+                            <p>
+                                <strong>Test Circuit:</strong> Montreal Circuit
+                            </p>
+                            <p>
+                                <strong>Train Dataset:</strong> Simple,
+                                Montmelo, Nürburgring Circuit
+                            </p>
+                            <p><strong>Test:</strong> Montreal Circuit</p>
+                        </div>
+
+                        <!-- TODO: TEST 03 -->
+                        <div>
+                            <h5>Test 03:</h5>
+                            <p>
+                                <strong>Test Circuit:</strong> Montmelo Circuit
+                            </p>
+                            <p>
+                                <strong>Train Dataset:</strong> Simple, Montreal
+                                , Nürburgring Circuit
+                            </p>
+                            <p><strong>Test:</strong> Montmelo Circuit</p>
+                        </div>
+                        <!-- TODO: TEST 04 -->
+                        <div>
+                            <h5>Test 04:</h5>
+                            <p>
+                                <strong>Test Circuit:</strong> Nürburgring
+                                Circuit
+                            </p>
+                            <p>
+                                <strong>Train Dataset:</strong> Simple, Montreal
+                                , Montmelo Circuit
+                            </p>
+                            <p><strong>Test:</strong> Nürburgring Circuit</p>
+                        </div>
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
