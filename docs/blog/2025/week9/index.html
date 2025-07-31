@@ -636,27 +636,42 @@
                             <code>onnxruntime.preload_dlls()</code> function.
                         </p>
                         <p>Example 1: Importing PyTorch</p>
-                        <pre><code>
-                        # Import torch will preload necessary DLLs. It needs
-                        # to be done before creating session.
-                        import torch
-                        import onnxruntime
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-5-code-1.png"
+                                alt="week-9-img-5"
+                                width="100%"
+                                style="border-radius: 10px 0 0 10px"
+                            />
+                        </div>
 
-                        # Create an inference session with CUDA execution provider
-                        session = onnxruntime.InferenceSession("model.onnx",
-                            providers=["CUDAExecutionProvider"])
-                        </code></pre>
-
-                        <p>Example 2: Using preload_dlls Function</p>
-                        <pre><code>
-                            import onnxruntime
-                            # Preload necessary DLLs
-                            onnxruntime.preload_dlls()
-
-                            # Create an inference session with CUDA execution provider
-                            session = onnxruntime.InferenceSession("model.onnx",
-                                providers=["CUDAExecutionProvider"])
-                            </code></pre>
+                        <p>
+                            Example 2: Using <code>preload_dlls</code> Function
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-6-code-2.png"
+                                alt="week-9-img-6"
+                                width="100%"
+                                style="border-radius: 10px 0 0 10px"
+                            />
+                        </div>
 
                         <!-- TODO: SUMMARY -->
                         <h5>Summary:</h5>
