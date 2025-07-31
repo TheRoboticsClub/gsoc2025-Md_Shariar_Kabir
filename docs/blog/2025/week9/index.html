@@ -317,10 +317,10 @@
                         <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
                         <!-- TODO: DRAW BACK OF ONNX2PYTORCH    -->
-                        <h4 class="mt-1 mb-1">
+                        <h3 class="mt-1 mb-1">
                             🏷️ ONNX Model Testing and Debugging Using
                             onnx2pytorch
-                        </h4>
+                        </h3>
 
                         <p class="mt-1 mb-1">
                             In
@@ -480,9 +480,9 @@
                         </ul>
 
                         <!-- TODO: MOVING TO ROBUST SOLUTION -->
-                        <h4 class="mt-2 mb-1">
+                        <h3 class="mt-2 mb-1">
                             🏷️ Moving to a stable and robust solution
-                        </h4>
+                        </h3>
                         <p class="mb-1">
                             After encountering stability and robustness issues
                             with the onnx2pytorch solution, we sought a more
@@ -674,10 +674,10 @@
                         </div>
 
                         <!-- TODO: VERIFY THE INSTALLATION -->
-                        <h5 class="mt-2 mb-1">
+                        <h3 class="mt-2 mb-1">
                             🏷️ Validation of ONNXRuntime-GPU and PyTorch with
                             CUDA Support
-                        </h5>
+                        </h3>
                         <p class="mb-1">
                             To verify that the ONNX Runtime is using the correct
                             CUDA and cuDNN libraries, you can check the
@@ -739,7 +739,7 @@
                             />
                         </div>
 
-                        <p class="mb-1 mt-1">4. Compare Speed (CPU vs GPU)</p>
+                        <p class="mt-1">4. Compare Speed (CPU vs GPU)</p>
                         <p class="mb-2">
                             After verifying the versions and confirming CUDA
                             availability, I processed
@@ -750,8 +750,9 @@
                                 rel="noopener noreferrer"
                                 >follow-line exercise</a
                             >
-                            images using both CPU and GPU modes. The performance
-                            difference is shown below:
+                            images using both <strong>CPU</strong> and
+                            <strong>GPU</strong>
+                            modes. The performance difference is shown below:
                         </p>
                         <div
                             style="
@@ -770,23 +771,24 @@
                             />
                         </div>
                         <p class="mt-1 mb-1">
-                            The GPU mode is significantly faster, processing all
-                            the <strong>17,000</strong> images in
+                            The <strong>GPU</strong> mode is significantly
+                            faster, processing all the
+                            <strong>17,000</strong> images in
                             <code>45.95</code> seconds compared to
-                            <code>85.90</code> seconds on CPU.
+                            <code>85.90</code> seconds on <strong>CPU</strong>.
                         </p>
-                        <p class="mb-1">
+                        <p>
                             This confirms that the ONNX Runtime is correctly
                             utilizing the GPU for inference, providing a
                             substantial performance boost over CPU execution.
                         </p>
-                        <p class="mb-1">
+                        <p>
                             This solution is now the standard setup for future
                             RoboticsAcademy DL exercises that use ONNX models.
                         </p>
 
                         <!-- TODO: SUMMARY -->
-                        <h5>🏷️ Summary:</h5>
+                        <h5 class="mt-1">🏷️ Summary:</h5>
                         <p>
                             I chose
                             <code
@@ -798,6 +800,57 @@
                             will become the standard setup for future
                             RoboticsAcademy DL exercises that use ONNX models.
                         </p>
+
+                        <!-- TODO: RUN MODEL ON FOLLOW-LINE EXERCISE -->
+                        <h3 class="mt-2 mb-1">
+                            🏷️ Evaluation of Deep Learning Model Performance in
+                            Follow-Line Exercise
+                        </h3>
+
+                        <p>
+                            In
+                            <a
+                                href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week7/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Week 07</a
+                            >
+                            , the focus was on preparing and training deep
+                            learning models using circuit-based datasets for the
+                            <a
+                                href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >follow-line exercise</a
+                            >. I created four distinct datasets by splitting
+                            data from four different circuits, using three
+                            circuits for training and one for testing in each
+                            combination. To understand the steering behavior
+                            within each dataset, I visualized the angular
+                            velocity (v) distributions, which highlighted the
+                            diversity and imbalance in steering commands. To
+                            address this, I applied
+                            <strong>upsampling</strong> and
+                            <strong>downsampling</strong>
+                            techniques to balance the datasets, ensuring that
+                            each steering class contained
+                            <strong>5,000</strong> samples. Finally, I trained
+                            <strong>four models</strong>
+                            on each balanced dataset using the
+                            <a
+                                href="https://developer.nvidia.com/blog/researching-and-developing-an-autonomous-vehicle-lane-following-system/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >NVIDIA PilotNet</a
+                            >
+                            architecture, a well-known framework for end-to-end
+                            autonomous driving tasks. I also provided training
+                            and testing <strong>loss visualizations</strong>,
+                            along with <strong>evaluation metrics</strong>, for
+                            all four models to assess their performance and
+                            generalization.
+                        </p>
+
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
@@ -937,6 +990,21 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >follow-line exercise</a
+                            >
+                        </p>
+                        <p
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            "
+                        >
+                            [10]
+                            <a
+                                href="https://developer.nvidia.com/blog/researching-and-developing-an-autonomous-vehicle-lane-following-system/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >NVIDIA PilotNet</a
                             >
                         </p>
                     </div>
