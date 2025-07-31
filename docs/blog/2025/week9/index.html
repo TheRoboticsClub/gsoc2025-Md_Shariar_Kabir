@@ -455,6 +455,11 @@
                         <h4 class="mt-2 mb-1">
                             🏷️ Moving to a stable and robust solution
                         </h4>
+                        <p class="mb-1">
+                            After encountering stability and robustness issues
+                            with the onnx2pytorch solution, we sought a more
+                            stable and reliable alternative.
+                        </p>
 
                         <div style="display: flex; gap: 4px; width: 100%">
                             <div
@@ -471,6 +476,7 @@
                                     src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-3.png"
                                     alt="week-7-img-1"
                                     width="100%"
+                                    style="border-radius: 10px 0 0 10px"
                                 />
                                 <span>Solution 01 </span>
                             </div>
@@ -488,11 +494,91 @@
                                     src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-4.png"
                                     alt="week-7-img-2"
                                     width="100%"
+                                    style="border-radius: 0 10px 10px 0"
                                 />
                                 <span>Solution 02 </span>
                             </div>
                         </div>
 
+                        <!-- TODO: SOLUTION 01 -->
+                        <h5 class="mt-1">
+                            ✅ Solution 01: onnxruntime-gpu + CUDA-Toolkit/cuDNN
+                            Stack
+                        </h5>
+                        <p class="mt-1">This approach involved:</p>
+                        <ol>
+                            <li>
+                                Installing onnxruntime-gpu in the RADI
+                                container.
+                            </li>
+                            <li>
+                                Manually installing CUDA Toolkit and cuDNN
+                                inside the Docker image to enable GPU support.
+                            </li>
+                        </ol>
+                        <p class="mb-1 mt-1">
+                            Pros: Direct ONNX model inference on GPU with
+                            onnxruntime
+                        </p>
+                        <p class="mb-1 mt-1">Cons:</p>
+                        <ul>
+                            <li>
+                                Large image size due to full CUDA/cuDNN
+                                installation.
+                            </li>
+                            <li>Dependency management becomes more complex.</li>
+                            <li>
+                                Limited flexibility in chaining with
+                                PyTorch-based workflows.
+                            </li>
+                            <li>
+                                Dependency conflicts arose, affecting
+                                compatibility with other components.
+                            </li>
+                        </ul>
+                        <p>
+                            After testing, this solution proved too heavy and
+                            complex to maintain within the lightweight scope of
+                            RADI.
+                        </p>
+                        <!-- TODO: SOLUTION 02 -->
+                        <h5 class="mt-1">
+                            ✅ Solution 2: onnxruntime-gpu + PyTorch with CUDA
+                            Support (Preferred)
+                        </h5>
+                        <p class="mt-1">This solution uses:</p>
+                        <ul>
+                            <li>onnxruntime-gpu for ONNX inference.</li>
+                            <li>
+                                PyTorch with CUDA support installed in RADI to
+                                allow flexible DL model operations.
+                            </li>
+                        </ul>
+                        <p class="mt-2 mb-1">Why we chose this:</p>
+                        <ul>
+                            <li>
+                                Leverages PyTorch for any extra processing or
+                                hybrid pipelines.
+                            </li>
+                            <li>Smaller image size than full CUDA install.</li>
+                            <li>Easier to maintain and debug.</li>
+                            <li>
+                                Verified compatibility with existing DL
+                                exercises and Docker infrastructure.
+                            </li>
+                        </ul>
+                        <!-- TODO: VERIFY ONNX DEGBUG AND PROVIDER OUTPUT -->
+                        <h4></h4>
+
+                        <!-- TODO: SUMMARY -->
+                        <h5>Summary:</h5>
+                        <summary>
+                            We chose Solution 2 as our final path forward due to
+                            its balance of performance, flexibility, and
+                            maintainability. This will become the standard setup
+                            for future RoboticsAcademy DL exercises that use
+                            ONNX models.
+                        </summary>
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
                             References
