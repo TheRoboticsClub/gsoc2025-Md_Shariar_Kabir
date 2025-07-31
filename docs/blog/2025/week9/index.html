@@ -529,7 +529,7 @@
                         </div>
 
                         <!-- TODO: SOLUTION 01 -->
-                        <h5 class="mt-1">
+                        <h5 class="mt-2">
                             ✅ Solution 01: onnxruntime-gpu + CUDA-Toolkit/cuDNN
                             Stack
                         </h5>
@@ -585,8 +585,8 @@
                             RADI.
                         </p>
                         <!-- TODO: SOLUTION 02 -->
-                        <h5 class="mt-1">
-                            ✅ Solution 2: onnxruntime-gpu + PyTorch with CUDA
+                        <h5 class="mt-2">
+                            ✅ Solution 02: onnxruntime-gpu + PyTorch with CUDA
                             Support (Preferred)
                         </h5>
                         <p class="mt-1">This solution uses:</p>
@@ -597,7 +597,7 @@
                                 allow flexible DL model operations.
                             </li>
                         </ul>
-                        <p class="mt-2 mb-1">Why we chose this:</p>
+                        <p class="mt-1 mb-1">Why we chose this:</p>
                         <ul>
                             <li>
                                 Leverages PyTorch for any extra processing or
@@ -610,17 +610,62 @@
                                 exercises and Docker infrastructure.
                             </li>
                         </ul>
-                        <!-- TODO: VERIFY ONNX DEGBUG AND PROVIDER OUTPUT -->
-                        <h4></h4>
+                        <!-- TODO: VERIFY ONNX DEBUG AND PROVIDER OUTPUT -->
+                        <h5>
+                            💻 Using ONNX Runtime GPU with PyTorch and CUDA
+                            Support for Accelerated Inference (Solution 02:
+                            Preferred Setup)
+                        </h5>
+                        <p class="mt-1 mt-1">
+                            The <strong> onnxruntime-gpu </strong> package is
+                            designed to work seamlessly with
+                            <strong>PyTorch</strong>, provided both are built
+                            against the same major version of
+                            <strong> CUDA </strong> and <strong>cuDNN</strong>.
+                            When installing PyTorch with CUDA support, the
+                            necessary CUDA and cuDNN DLLs are included,
+                            eliminating the need for separate installations of
+                            the <strong>CUDA toolkit</strong> or
+                            <strong>cuDNN</strong>.
+                        </p>
+                        <p class="mt-1 mb-1">
+                            To ensure ONNX Runtime utilizes the DLLs installed
+                            by PyTorch, you can preload these libraries before
+                            creating an inference session. This can be achieved
+                            by either importing PyTorch or by using the
+                            <code>onnxruntime.preload_dlls()</code> function.
+                        </p>
+                        <p>Example 1: Importing PyTorch</p>
+                        <code>
+                            # Import torch will preload necessary DLLs. It need
+                            to be done before creating session. import torch
+                            import onnxruntime # Create an inference session
+                            with CUDA execution provider session =
+                            onnxruntime.InferenceSession("model.onnx",
+                            providers=["CUDAExecutionProvider"])
+                        </code>
+
+                        <p>Example 2: Using preload_dlls Function</p>
+                        <code>
+                            import onnxruntime # Preload necessary DLLs
+                            onnxruntime.preload_dlls() # Create an inference
+                            session with CUDA execution provider session =
+                            onnxruntime.InferenceSession("model.onnx",
+                            providers=["CUDAExecutionProvider"])
+                        </code>
 
                         <!-- TODO: SUMMARY -->
                         <h5>Summary:</h5>
                         <p>
-                            I chose Solution 2 as our final path forward due to
-                            its balance of performance, flexibility, and
-                            maintainability. This will become the standard setup
-                            for future RoboticsAcademy DL exercises that use
-                            ONNX models.
+                            I chose
+                            <code
+                                >Solution 02: onnxruntime-gpu + PyTorch with
+                                CUDA Support</code
+                            >
+                            as our final path forward due to its balance of
+                            performance, flexibility, and maintainability. This
+                            will become the standard setup for future
+                            RoboticsAcademy DL exercises that use ONNX models.
                         </p>
                         <!-- TODO: REFENERCE -->
                         <h2 id="references" style="margin-top: 2rem">
