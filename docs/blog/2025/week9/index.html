@@ -612,7 +612,7 @@
                         </ul>
                         <!-- TODO: VERIFY ONNX DEBUG AND PROVIDER OUTPUT -->
                         <h5 class="mt-2">
-                            💻 Using ONNX Runtime GPU with PyTorch and CUDA
+                            🏷️ Using ONNX Runtime GPU with PyTorch and CUDA
                             Support for Accelerated Inference (Solution 02:
                             Preferred Setup)
                         </h5>
@@ -653,7 +653,7 @@
                             />
                         </div>
 
-                        <p>
+                        <p class="mt-1">
                             Example 2: Using <code>preload_dlls</code> Function
                         </p>
                         <div
@@ -673,8 +673,76 @@
                             />
                         </div>
 
+                        <!-- TODO: VERIFY THE INSTALLATION -->
+                        <h5 class="mt-2 mb-1">
+                            🏷️ Validation of ONNXRuntime-GPU and PyTorch with
+                            CUDA Support
+                        </h5>
+                        <p class="mb-1">
+                            To verify that the ONNX Runtime is using the correct
+                            CUDA and cuDNN libraries, you can check the
+                            environment variables or use the ONNX Runtime API to
+                            print the provider information. Some ways to verify:
+                        </p>
+
+                        <p class="mb-1">1. Verify PyTorch Has CUDA Support:</p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-7-code-3.png"
+                                alt="week-9-img-6"
+                                width="100%"
+                                style="border-radius: 10px 0 0 10px"
+                            />
+                        </div>
+
+                        <p class="mb-1">2. Verify ONNX Runtime Uses GPU</p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-8-code-4.png"
+                                alt="week-9-img-6"
+                                width="100%"
+                                style="border-radius: 10px 0 0 10px"
+                            />
+                        </div>
+                        <p class="mb-1">3. Monitoring GPU Usages</p>
+                        <code>watch nvidia-smi</code>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                            "
+                        >
+                            <img
+                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-9/week-9-image-9-code-5.png"
+                                alt="week-9-img-6"
+                                width="100%"
+                                style="border-radius: 10px 0 0 10px"
+                            />
+                        </div>
+
+                        <p class="mb-1">4. Compare Speed (CPU vs GPU)</p>
+
                         <!-- TODO: SUMMARY -->
-                        <h5>Summary:</h5>
+                        <h5>🏷️ Summary:</h5>
                         <p>
                             I chose
                             <code
