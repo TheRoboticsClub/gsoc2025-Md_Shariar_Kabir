@@ -234,13 +234,6 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2025-Md_Shariar_Kabir/roadmap/"
-                                    >roadmap</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
                                     href="/gsoc2025-Md_Shariar_Kabir/about/"
                                     >about</a
                                 >
@@ -279,32 +272,6 @@
                 <article class="post-content">
                     <div id="markdown-content">
                         <h2 id="preliminaries">Preliminaries</h2>
-                        <p>
-                            This week pivots towards furthur enhancing and
-                            evaluating the model. With the previously
-                            implemented evaluation metrics, we can now more
-                            thoroughly gauge our model’s performance. As the
-                            program enters its latter half, we would like to
-                            start transferring the work we have done so far to
-                            the
-                            <a
-                                href="https://jderobot.github.io/BehaviorMetrics/"
-                                rel="external nofollow noopener"
-                                target="_blank"
-                                >Behavior Metrics</a
-                            >
-                            platform. Tailored for benchmarking autonomous
-                            driving models, this platform allows users to load
-                            their models into predefined scenarios and obtain a
-                            detailed performance metric report. Currently, the
-                            platform only supports the lane-following task,
-                            where the agent doesn’t have to deal with obstacles
-                            (other vehicles and pedestrians), intersections, or
-                            traffic lights. An immediate goal for this week is
-                            to expand Behavior Metrics by introducing traffic,
-                            thus making its environment more dynamic and
-                            realistic.
-                        </p>
 
                         <h2 id="objectives">Objectives</h2>
                         <ul class="task-list">
@@ -314,128 +281,11 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />Release posts for weeks 7 and 8
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                />Update codebase
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Refine and assess model performance
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Begin integration with Behavior Metrics
-                                platform
+                                />
                             </li>
                         </ul>
 
                         <h2 id="execution">Execution</h2>
-                        <h3 id="model-evaluation">Model Evaluation</h3>
-                        <p>
-                            One intriguing finding from the evaluation is what
-                            appears to be an inverse relationship between
-                            success rate and the overall driving score. As shown
-                            in the image below, after five dagger iterations,
-                            the success rate is the highest but the overall
-                            driving score is the lowest. Let’s dissect the
-                            potential rationale:
-                        </p>
-
-                        <p>
-                            The model is bad at obstacle avoidance. When the
-                            model strays from the designated path (for instance,
-                            by taking an incorrect turn), it invariably ends up
-                            with a subpar route completion score, denoted as
-                            \(R\). However, this deviation inadvertently
-                            minimizes its exposure to potential obstacles. On
-                            the contrary, when the agent actually drives all the
-                            way to the target location, it is more likely to
-                            collide with other vehicles, resulting in a
-                            significanlty lower infraction penalty score \(P\),
-                            contributing to a diminished overall driving score,
-                            \(PR\).
-                        </p>
-
-                        <p>
-                            Another issue is once a collision with a front
-                            vehicle occurs, the agent is likely to repeatedly
-                            bump into the same vehicle as they both move forward
-                            staying very closely to each other, causing the
-                            infraction penalty score to decrease
-                            <a href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week6"
-                                >exponentially</a
-                            >.
-                        </p>
-                        <center>
-                            <img
-                                src="/gsoc2025-Md_Shariar_Kabir/assets/img/v8_evaluation%20results.png"
-                            />
-                        </center>
-
-                        <h3 id="v824-demo">v8.2.4 Demo</h3>
-                        <p>
-                            As shown in the demo below, after five DAgger
-                            iterations, the agent is able to follow the lane and
-                            follow instructions to make turns without much
-                            trouble, but lacks in avoiding obstacles, which we
-                            will work on in the upcoming weeks.
-                        </p>
-                        <center>
-                            <iframe
-                                src="https://drive.google.com/file/d/1xAIVwNmU8DCRFAoRrKAMalsQsR66L7cK/preview"
-                                width="560"
-                                height="400"
-                                allow="autoplay"
-                            ></iframe>
-                        </center>
-
-                        <h3 id="traffic-generation-in-behavior-metrics">
-                            Traffic Generation in Behavior Metrics
-                        </h3>
-                        <p>
-                            This week, we began working on integrating traffic
-                            generation for CARLA tasks in Behavior Metrics. For
-                            updates on this, check the
-                            <a
-                                href="https://github.com/JdeRobot/BehaviorMetrics/issues/625"
-                                rel="external nofollow noopener"
-                                target="_blank"
-                                >issue</a
-                            >
-                            we opened on the Behavior Metrics Github page.
-                        </p>
-
-                        <p>
-                            We had some difficulty with generating pedestrians.
-                            An issue arises with the
-                            <a
-                                href="https://github.com/deepsense-ai/carla-birdeye-view"
-                                rel="external nofollow noopener"
-                                target="_blank"
-                                >carla-birdeye-view</a
-                            >
-                            dependency of Behavior Metrics. When this tool tries
-                            to create a bird’s eye view for pedestrians, it runs
-                            into a NaN error. This happens because the tool
-                            mistakenly identifies the AI controllers used by
-                            pedestrians as pedestrians themselves, leading to
-                            errors when it tries to read their bounding boxes.
-                            We’ve reported this on the carla-birdeye-view Github
-                            page.
-                        </p>
                     </div>
                 </article>
 
@@ -451,44 +301,32 @@
                 <p class="mb-2">
                     Here are some more articles you might like to read next:
                 </p>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
                         href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week9/"
-                        >Week 9: July 24 ~ July 30</a
+                        >Week 9: July 28 ~ August 03</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week18/"
-                        >GSoC 2025: Project Recap</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week8/"
+                        >Week 8: 21 ~ July 27</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week11/"
-                        >Week 11: Aug 07 ~ Aug 13</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week7/"
+                        >Week 7: 14 ~ July 20</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week3/"
-                        >Week 3: June 12 ~ June 18</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week12/"
-                        >Week 12~13: Aug 14 ~ Aug 27</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week6/"
+                        >Week 6: July 07 ~ July 13</a
                     >
                 </li>
             </div>
