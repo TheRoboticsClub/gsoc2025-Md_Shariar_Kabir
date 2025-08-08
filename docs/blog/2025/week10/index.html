@@ -284,11 +284,121 @@
                                     class="task-list-item-checkbox"
                                     disabled
                                     checked
-                                />
+                                />Propose an asynchronous model upload workflow
+                                to accelerate exercise execution and enhance
+                                responsiveness in the web interface.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />Collect counterclockwise datasets for all four
+                                circuits to complement existing clockwise data.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />Process and merge clockwise and
+                                counterclockwise datasets to form richer, more
+                                balanced training data.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />Train four individual circuit-specific models
+                                using the NVIDIA PilotNet architecture.
+                            </li>
+                            <li class="task-list-item">
+                                <input
+                                    type="checkbox"
+                                    class="task-list-item-checkbox"
+                                    disabled
+                                    checked
+                                />Train a unified master model capable of
+                                running across all circuits.
                             </li>
                         </ul>
 
+                        <!-- TODO: EXECUTION -->
                         <h2 id="execution">Execution</h2>
+                        <!--1. Asynchronous Model Upload Proposal  -->
+                        <div>
+                            <h4 class="mt-2 mb-1">
+                                Asynchronous Model Upload Proposal
+                            </h4>
+                            <p>
+                                The current model upload solution involves
+                                combining the ONNX model, user code, and other
+                                necessary files into a ZIP archive, sending it
+                                to the Robotics Academy Manager (RAM), and then
+                                having the RAM extract the contents inside the
+                                Docker container.
+                            </p>
+                            <p>
+                                The ONNX model size ranges from approximately
+                                <strong>6 MB to 50 MB</strong>, depending on the
+                                exercise. My proposal is to upload the ONNX
+                                model asynchronous with the user’s code and
+                                other necessary files. In manual testing, this
+                                approach proved to be
+                                <strong>twice (2x)</strong> as fast as the
+                                current model upload process.
+                            </p>
+                            <div
+                                style="
+                                    display: flex;
+                                    gap: 4px;
+                                    width: 100%;
+                                    margin-top: 2rem;
+                                    margin-bottom: 2rem;
+                                "
+                            >
+                                <div
+                                    style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 49%;
+                                        gap: 4px;
+                                    "
+                                >
+                                    <img
+                                        src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-10/week-10-CURRENT_PROCESS.png"
+                                        alt="week-10-img-1"
+                                        width="100%"
+                                        style="border-radius: 10px 0 0 10px"
+                                    />
+                                    <span>Current Process</span>
+                                </div>
+                                <div
+                                    style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 49%;
+                                        gap: 4px;
+                                    "
+                                >
+                                    <img
+                                        src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-10/week-10-PROPOSED_PROCESS.png"
+                                        alt="week-10-img-2"
+                                        width="100%"
+                                        style="border-radius: 0 10px 10px 0"
+                                    />
+                                    <span>Proposed Process</span>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- TODO: REFENERCE -->
                         <div>
