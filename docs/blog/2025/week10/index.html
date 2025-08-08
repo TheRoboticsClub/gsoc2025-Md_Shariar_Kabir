@@ -491,55 +491,170 @@
                                 circuit.
                             </p>
                         </div>
-
-                        <!-- TODO: REFENERCE -->
-                        <div>
-                            <h2 id="references" style="margin-top: 2rem">
-                                References
-                            </h2>
-                            <p
-                                style="
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 10px;
-                                "
-                            >
-                                [1]<a
-                                    href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week9/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    >week - 9</a
-                                >
-                            </p>
-                            <p
-                                style="
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 10px;
-                                "
-                            >
-                                [2]<a
-                                    href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week5/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    >week 5</a
-                                >
-                            </p>
-                            <p
-                                style="
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 10px;
-                                "
-                            >
-                                [x]
+                        <!-- 4. Individual Circuit Models -->
+                        <div class="mt-2">
+                            <h4 class="mt-2 mb-1">
+                                Circuit-Specific Model Training
+                            </h4>
+                            <p>
+                                With the newly merged datasets, I trained
+                                <strong>four</strong>
+                                individual models for each circuit using the
                                 <a
-                                    href="https://hub.docker.com/r/jderobot/robotics-academy"
+                                    href="https://developer.nvidia.com/blog/researching-and-developing-an-autonomous-vehicle-lane-following-system/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >RoboticsAcademy Docker Image (RADI)</a
+                                    >NVIDIA PilotNet</a
                                 >
+                                architecture. After fine-tuning the neural
+                                network and It's parameters, the results are
+                                summarized below with descriptions.
                             </p>
+
+                            <!-- TODO: TEST 01 -->
+                            <div style="margin-top: 2rem">
+                                <h5
+                                    style="
+                                        text-align: center;
+                                        font-weight: 600;
+                                        font-size: 28px;
+                                    "
+                                >
+                                    Test 01:
+                                </h5>
+                                <p>
+                                    <strong>Test Circuit:</strong> Simple
+                                    Circuit
+                                </p>
+                                <p>
+                                    <strong>Train Dataset:</strong> Montreal,
+                                    Montmelo, Nürburgring Circuit
+                                </p>
+                                <p><strong>Test:</strong> Simple Circuit</p>
+
+                                <div
+                                    style="
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        margin-top: 1rem;
+                                        margin-bottom: 1rem;
+                                    "
+                                >
+                                    <iframe
+                                        width="100%"
+                                        height="450"
+                                        src="https://www.youtube.com/embed/g3qYk87g4oM?si=lGOlWkjA1T_Gh1p4"
+                                        title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen
+                                    ></iframe>
+                                </div>
+
+                                <!-- result :crash: 55s, com: 70 -->
+                                <h5 class="mt-1">Result:</h5>
+                                <p class="mb-2">
+                                    The simple circuit successfully completed
+                                    the entire track in both
+                                    <strong>clockwise</strong> and
+                                    <strong>counterclockwise</strong> directions
+                                    without any deviations. It maintained
+                                    consistent line detection and stable
+                                    movement throughout the circuit. The robot
+                                    completed the track in approximately
+                                    <code>105</code> seconds in the
+                                    <strong>clockwise</strong>
+                                    direction and <code>109</code> seconds in
+                                    the
+                                    <strong>counterclockwise</strong> direction,
+                                    handling both straight sections and curves
+                                    with accuracy.
+                                </p>
+                            </div>
+
+                            <!-- TODO: REFENERCE -->
+                            <div>
+                                <h2 id="references" style="margin-top: 2rem">
+                                    References
+                                </h2>
+                                <p
+                                    style="
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                    "
+                                >
+                                    [1]<a
+                                        href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week9/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >week - 9</a
+                                    >
+                                </p>
+                                <p
+                                    style="
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                    "
+                                >
+                                    [2]<a
+                                        href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week5/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >week 5</a
+                                    >
+                                </p>
+                                <p
+                                    style="
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                    "
+                                >
+                                    [3]<a
+                                        href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week7/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        week 7
+                                    </a>
+                                </p>
+                                <p
+                                    style="
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                    "
+                                >
+                                    [4]
+                                    <a
+                                        href="https://developer.nvidia.com/blog/researching-and-developing-an-autonomous-vehicle-lane-following-system/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >NVIDIA PilotNet</a
+                                    >
+                                </p>
+                                <p
+                                    style="
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                    "
+                                >
+                                    [x]
+                                    <a
+                                        href="https://hub.docker.com/r/jderobot/robotics-academy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >RoboticsAcademy Docker Image (RADI)</a
+                                    >
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </article>
