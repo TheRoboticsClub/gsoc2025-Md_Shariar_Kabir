@@ -422,6 +422,74 @@
                                 patterns of curves, intersections, or lane
                                 markings.
                             </p>
+                            <p>
+                                To address this, I conducted counterclockwise
+                                runs on all four circuits within the simulator
+                                using my custom data collection script. I
+                                followed the same procedure as during the
+                                clockwise dataset collection in
+                                <a
+                                    href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week5/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >week 5</a
+                                >
+                                .
+                            </p>
+                            <p>
+                                This approach ensured that the dataset captured:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Counterclockwise curves</strong>:
+                                    The model learned to navigate turns in the
+                                    opposite direction, enhancing its ability to
+                                    handle diverse driving scenarios.
+                                </li>
+                                <li>
+                                    Mirrored visual perspectives of the road,
+                                    which often differ significantly from
+                                    clockwise runs.
+                                </li>
+                                <li>
+                                    Balanced left and right turn occurrences,
+                                    reducing steering bias.
+                                </li>
+                            </ul>
+                            <p>
+                                By adding counterclockwise data, the overall
+                                dataset became more symmetric and representative
+                                of real driving conditions, making the models
+                                less prone to overfitting to a single driving
+                                pattern.
+                            </p>
+                        </div>
+                        <!-- 3. -->
+                        <div class="mt-2">
+                            <h4 class="mt-2 mb-1">
+                                Dataset Processing & Merging
+                            </h4>
+                            <p>
+                                The newly collected counterclockwise datasets
+                                were processed using the same pipeline as the
+                                previous datasets from
+                                <a
+                                    href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week7/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    week 7
+                                </a>
+                                , including steps such as
+                                <code> image cropping </code>,
+                                <code>angular velocity (w)</code>
+                                categorization, and <code>balancing</code>.
+                                After processing, I merged the
+                                <strong>clockwise</strong> and
+                                <strong>counterclockwise</strong> datasets to
+                                create more comprehensive datasets for each
+                                circuit.
+                            </p>
                         </div>
 
                         <!-- TODO: REFENERCE -->
@@ -441,6 +509,20 @@
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >week - 9</a
+                                >
+                            </p>
+                            <p
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                "
+                            >
+                                [2]<a
+                                    href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/week5/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >week 5</a
                                 >
                             </p>
                             <p
