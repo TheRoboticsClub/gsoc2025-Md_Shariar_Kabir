@@ -13,9 +13,9 @@
         />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>
-            Week 11: Aug 07 ~ Aug 13 | Meiqi Zhao | JdeRobot x GSoC2023
+            Week 11: Aug 11 ~ Aug 17 | Md. Shariar Kabir | JdeRobot x GSoC2025
         </title>
-        <meta name="author" content="JdeRobot x Google Summer of Code 2023" />
+        <meta name="author" content="JdeRobot x Google Summer of Code 2025" />
         <meta
             name="description"
             content="Exploring weighted L1 loss and integration with Behavior Metrics"
@@ -81,11 +81,11 @@
         />
         <link
             rel="stylesheet"
-            href="/gsoc2023-Meiqi_Zhao/assets/css/main.css"
+            href="/gsoc2025-Md_Shariar_Kabir/assets/css/main.css"
         />
         <link
             rel="canonical"
-            href="http://localhost:4000/gsoc2023-Meiqi_Zhao/blog/2023/week11/"
+            href="http://localhost:4000/gsoc2025-Md_Shariar_Kabir/blog/2025/week11/"
         />
 
         <!-- Dark Mode -->
@@ -97,8 +97,8 @@
             id="highlight_theme_dark"
         />
 
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/theme.js"></script>
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/dark_mode.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/theme.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/dark_mode.js"></script>
     </head>
 
     <!-- Body -->
@@ -113,8 +113,8 @@
                 <div class="container">
                     <a
                         class="navbar-brand title font-weight-lighter"
-                        href="/gsoc2023-Meiqi_Zhao/"
-                        >Meiqi Zhao | JdeRobot x GSoC2023</a
+                        href="/gsoc2025-Md_Shariar_Kabir/"
+                        >Md. Shariar Kabir | JdeRobot x GSoC2025</a
                     >
                     <!-- Navbar Toggle -->
                     <button
@@ -139,7 +139,9 @@
                         <ul class="navbar-nav ml-auto flex-nowrap">
                             <!-- About -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/gsoc2023-Meiqi_Zhao/"
+                                <a
+                                    class="nav-link"
+                                    href="/gsoc2025-Md_Shariar_Kabir/"
                                     >home</a
                                 >
                             </li>
@@ -148,7 +150,7 @@
                             <li class="nav-item active">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/blog/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/blog/"
                                     >blog<span class="sr-only"
                                         >(current)</span
                                     ></a
@@ -159,21 +161,14 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/demo/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/demo/"
                                     >demo</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/roadmap/"
-                                    >roadmap</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/about/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/about/"
                                     >about</a
                                 >
                             </li>
@@ -204,156 +199,59 @@
 
             <div class="post">
                 <header class="post-header">
-                    <h1 class="post-title">Week 11: Aug 07 ~ Aug 13</h1>
-                    <p class="post-meta">August 15, 2023</p>
+                    <h1 class="post-title">Week 11: Aug 11 ~ Aug 17</h1>
+                    <p class="post-meta">August 17, 2025</p>
                 </header>
 
                 <article class="post-content">
                     <div id="markdown-content">
-                        <h2 id="preliminaries">Preliminaries</h2>
-                        <p>
-                            This week, our focus remained on enhancing our
-                            model’s performance, especially in the area of
-                            obstacle avoidance. Despite the agent’s attempts to
-                            decelerate when detecting a vehicle ahead, it
-                            doesn’t employ the brake efficiently, leading to
-                            frequent collisions. To address this, we adjusted
-                            the L1 loss used during training, giving more
-                            emphasis to braking than to throttle or steering. We
-                            also made progress in integrating traffic generation
-                            functionality within Behavior Metrics.
-                        </p>
+                        <!-- TODO: PRELIMINARIES -->
+                        <div>
+                            <h2 id="preliminaries">Preliminaries</h2>
+                        </div>
 
-                        <h2 id="objectives">Objectives</h2>
-                        <ul class="task-list">
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Adjust driving score weights
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Modify the L1 loss weights for training
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                />Adjust the model-autopilot driving balance for
-                                DAgger data collection
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Continue integration with Behavior Metrics
-                                platform
-                            </li>
-                        </ul>
+                        <!-- TODO: OBJECTIVES -->
+                        <div>
+                            <h2 id="objectives">Objectives</h2>
+                            <ul class="task-list">
+                                <li class="task-list-item">
+                                    <input
+                                        type="checkbox"
+                                        class="task-list-item-checkbox"
+                                        disabled
+                                        checked
+                                    />
+                                    Uploading datasets to the Hugging Face.
+                                </li>
+                            </ul>
+                        </div>
 
-                        <h2 id="execution">Execution</h2>
-                        <h3 id="weighted-l1-score">Weighted L1 Score</h3>
-                        <p>
-                            Our primary concern is the agent’s inadequate
-                            braking response. The image below, showing ground
-                            truth versus model predictions on the validation
-                            set, underscores this deficiency. Note that the
-                            model’s predicted braking remains at zero regardless
-                            of the true label value, suggesting a failure to
-                            grasp appropriate braking instances.
-                        </p>
-                        <center>
-                            <img
-                                src="/gsoc2023-Meiqi_Zhao/assets/img/unweighted%20L1%20loss.png"
-                                width="800"
-                            />
-                        </center>
-                        <p>
-                            Previously, our training has been using the L1 loss.
-                            In an effort to better capture braking nuances, we
-                            shifted to a weighted L1 loss, assigning weights of
-                            2:1:5 to throttle, steering, and braking,
-                            respectively. The intention was to encourage the
-                            model to prioritize learning about braking. However,
-                            as shown below, this alteration had minimal impact
-                            on the model’s learning pattern.
-                        </p>
-                        <center>
-                            <img
-                                src="/gsoc2023-Meiqi_Zhao/assets/img/weighted%20L1%20loss.png"
-                                width="800"
-                            />
-                        </center>
+                        <!-- TODO: EXECUTION -->
+                        <div>
+                            <h2 id="execution">Execution</h2>
+                        </div>
 
-                        <h3 id="other-ideas-auxiliary-tasks">
-                            Other Ideas: Auxiliary Tasks
-                        </h3>
-                        <p>
-                            As mentioned above, our effort to improve the
-                            model’s performance in obstacle avoidance by
-                            reweighing the L1 loss didn’t quite work. This
-                            persistent issue suggests that we may need to
-                            re-evaluate our data, consider other model
-                            architectures, or explore alternative training
-                            strategies. One of the ideas we have is to train
-                            with auxiliary tasks. Here are some auxiliary tasks
-                            we might consider:
-                        </p>
-                        <ul>
-                            <li>
-                                <strong>Braking Prediction</strong>: By making
-                                the model anticipate when it should brake, it
-                                could enhance its real-time braking responses.
-                            </li>
-                            <li>
-                                <strong>Obstacle Distance</strong> Estimation:
-                                Predicting the distance to the nearest obstacle
-                                could help in modulating speed and deciding when
-                                to brake.
-                            </li>
-                            <li>
-                                <strong>Speed Prediction</strong>: By predicting
-                                its next speed, the model might better adjust
-                                throttle and braking actions based on upcoming
-                                conditions.
-                            </li>
-                        </ul>
-
-                        <h3 id="traffic-generation-in-behavior-metrics">
-                            Traffic Generation in Behavior Metrics
-                        </h3>
-                        <p>
-                            The user can now specify the number of other
-                            vehicles and pedestrians while configuring for the
-                            scenario in Behavior Metrics using the yaml config
-                            file. An example showcased below demonstrates a
-                            scenario where the street is populated by other
-                            vehicles. Importantly, these vehicles are set in
-                            motion only once the user initiates the ‘start’ and
-                            will halt once the agent stops. Switching from
-                            asynchronous to synchronous mode in CARLA
-                            facilitates this synchronization. We will shortly
-                            open a PR for this feature, inviting feedback before
-                            finalizing the update.
-                        </p>
-                        <center>
-                            <iframe
-                                src="https://drive.google.com/file/d/1KLEe_6CdB6pE0ndbEaZSgRp2orz6i8LZ/preview"
-                                width="560"
-                                height="400"
-                                allow="autoplay"
-                            ></iframe>
-                        </center>
+                        <!-- TODO: REFERENCE -->
+                        <div>
+                            <h2 id="references" style="margin-top: 2rem">
+                                References
+                            </h2>
+                            <p
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                "
+                            >
+                                [x]
+                                <a
+                                    href="https://hub.docker.com/r/jderobot/robotics-academy"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >RoboticsAcademy Docker Image (RADI)</a
+                                >
+                            </p>
+                        </div>
                     </div>
                 </article>
 
@@ -369,44 +267,32 @@
                 <p class="mb-2">
                     Here are some more articles you might like to read next:
                 </p>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week12/"
-                        >Week 12~13: Aug 14 ~ Aug 27</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week10/"
+                        >Week 10: Aug 04 ~ Aug 10</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week18/"
-                        >GSoC 2023: Project Recap</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week9/"
+                        >Week 9: July 28 ~ Aug 03</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week10/"
-                        >Week 10: July 31 ~ Aug 06</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week8/"
+                        >Week 8: 21 ~ July 27</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week3/"
-                        >Week 3: June 12 ~ June 18</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week8/"
-                        >Week 8: July 17 ~ July 23</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week7/"
+                        >Week 7: 14 ~ July 20</a
                     >
                 </li>
             </div>
@@ -473,7 +359,7 @@
         ></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/masonry.js"
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/masonry.js"
             type="text/javascript"
         ></script>
 
@@ -484,7 +370,10 @@
             integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
             crossorigin="anonymous"
         ></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/zoom.js"></script>
+        <script
+            defer
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/zoom.js"
+        ></script>
 
         <!-- Bootstrap Table -->
         <script
@@ -493,11 +382,14 @@
         ></script>
 
         <!-- Load Common JS -->
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/no_defer.js"></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/common.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/no_defer.js"></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/copy_code.js"
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/common.js"
+        ></script>
+        <script
+            defer
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/copy_code.js"
             type="text/javascript"
         ></script>
 
