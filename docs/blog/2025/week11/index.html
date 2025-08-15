@@ -87,7 +87,76 @@
             rel="canonical"
             href="http://localhost:4000/gsoc2025-Md_Shariar_Kabir/blog/2025/week11/"
         />
+        <!-- custom style -->
+        <style>
+            /* p tag text justify */
+            p {
+                text-align: justify;
+            }
+            /* Hide default checkbox appearance */
+            input[type="checkbox"].task-list-item-checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #ccc;
+                position: relative;
+                cursor: not-allowed;
+            }
 
+            /* Checked + disabled style */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked {
+                background-color: green; /* Green background */
+            }
+
+            /* White checkmark for checked box */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+            .task-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .task-list-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .task-list-item span {
+            }
+
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+
+            .bt {
+                border-top: 2px solid #2d2d2e;
+            }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+        </style>
         <!-- Dark Mode -->
 
         <link
