@@ -347,6 +347,36 @@
                         <!-- TODO: EXECUTION -->
                         <div>
                             <h2 id="execution">Execution</h2>
+                            <h4 class="mt-1 mb-1">
+                                Uploading Datasets to Hugging Face
+                            </h4>
+                            <p>
+                                I went through all the data we would previously
+                                collected from the different circuits, reviewing
+                                each entry carefully to make sure everything was
+                                accurate and consistent. Corrupted, duplicate,
+                                or incomplete image correspending label pairs
+                                were removed, and I standardized the folder
+                                structure so it would be easy for others to
+                                navigate. I also set up a clear file-naming
+                                convention and double-checked that all metadata
+                                files—like the CSVs linking images to their
+                                velocity commands—were error-free and properly
+                                formatted.
+                            </p>
+                            <p>
+                                Once everything was cleaned up, I split the data
+                                into dedicated training and testing sets to keep
+                                evaluations consistent. In the end, I prepared
+                                two finalized datasets for public release: one
+                                with the Montréal, Montmeló, and Nürburgring
+                                tracks for training and testing the Simple
+                                Circuit scenario, and another combining all four
+                                circuits for training a more generalized model.
+                                Both cleaned datasets were uploaded to Hugging
+                                Face with clear documentation, making them ready
+                                for others to use in deep learning experiments.
+                            </p>
                         </div>
 
                         <!-- TODO: REFERENCE -->
