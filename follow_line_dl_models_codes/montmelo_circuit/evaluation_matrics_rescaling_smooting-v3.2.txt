@@ -1,0 +1,9 @@
+
+################## montmelo_circuit ##################
+--- Evaluation Metrics After Rescaling + Smoothing ---
+Combined - MSE: 0.0822, MAE: 0.1664, R2: 0.8653
+Linear Velocity (v) - MSE: 0.1380, MAE: 0.2197, R2: 0.8680
+Angular Velocity (w) - MSE: 0.0264, MAE: 0.1130, R2: 0.8626
+
+
+

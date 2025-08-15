@@ -1,0 +1,9 @@
+
+################## montreal_circuit ##################
+--- Evaluation Metrics After Rescaling + Smoothing ---
+Combined - MSE: 0.0931, MAE: 0.1846, R2: 0.8051
+Linear Velocity (v) - MSE: 0.1654, MAE: 0.2676, R2: 0.8767
+Angular Velocity (w) - MSE: 0.0207, MAE: 0.1016, R2: 0.7335
+
+
+

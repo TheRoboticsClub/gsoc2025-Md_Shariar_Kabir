@@ -1,0 +1,9 @@
+
+################## simple_circuit ##################
+--- Evaluation Metrics After Rescaling + Smoothing ---
+Combined - MSE: 0.1017, MAE: 0.2041, R2: 0.8593
+Linear Velocity (v) - MSE: 0.1752, MAE: 0.2905, R2: 0.8497
+Angular Velocity (w) - MSE: 0.0282, MAE: 0.1177, R2: 0.8688
+
+
+

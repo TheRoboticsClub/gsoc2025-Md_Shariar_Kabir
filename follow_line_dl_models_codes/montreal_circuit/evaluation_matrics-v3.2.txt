@@ -1,0 +1,9 @@
+
+################## montreal_circuit ##################
+--- Evaluation Metrics ---
+Combined - MSE: 0.2781, MAE: 0.3548, R2: 0.6263
+Linear Velocity (v) - MSE: 0.5287, MAE: 0.5950, R2: 0.6060
+Angular Velocity (w) - MSE: 0.0275, MAE: 0.1147, R2: 0.6467
+
+
+

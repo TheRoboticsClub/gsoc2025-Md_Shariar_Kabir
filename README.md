@@ -6,6 +6,8 @@ GSOC 2025 Project 4
 
 ### :computer: [Code](./code/)
 
+### 🧠 [follow-line-models](./follow_line_dl_models_codes/)
+
 ## Credits
 
 This blog was adapted from a template by [https://github.com/TheRoboticsClub/gsoc2023-Meiqi_Zhao](https://github.com/TheRoboticsClub/gsoc2023-Meiqi_Zhao)

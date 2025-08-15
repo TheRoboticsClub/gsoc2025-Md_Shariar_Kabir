@@ -1,0 +1,9 @@
+
+################## nurburgring_circuit ##################
+--- Evaluation Metrics After Rescaling + Smoothing ---
+Combined - MSE: 0.0866, MAE: 0.1808, R2: 0.8643
+Linear Velocity (v) - MSE: 0.1374, MAE: 0.2320, R2: 0.8704
+Angular Velocity (w) - MSE: 0.0359, MAE: 0.1296, R2: 0.8581
+
+
+

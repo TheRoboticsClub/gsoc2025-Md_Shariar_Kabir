@@ -1,0 +1,9 @@
+
+################## nurburgring_circuit ##################
+--- Evaluation Metrics ---
+Combined - MSE: 0.0962, MAE: 0.1974, R2: 0.8400
+Linear Velocity (v) - MSE: 0.1465, MAE: 0.2411, R2: 0.8618
+Angular Velocity (w) - MSE: 0.0460, MAE: 0.1536, R2: 0.8183
+
+
+

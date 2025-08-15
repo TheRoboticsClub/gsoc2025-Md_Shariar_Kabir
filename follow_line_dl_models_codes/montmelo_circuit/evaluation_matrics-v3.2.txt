@@ -1,0 +1,9 @@
+
+################## montmelo_circuit ##################
+--- Evaluation Metrics ---
+Combined - MSE: 0.0952, MAE: 0.1870, R2: 0.8317
+Linear Velocity (v) - MSE: 0.1540, MAE: 0.2376, R2: 0.8527
+Angular Velocity (w) - MSE: 0.0364, MAE: 0.1364, R2: 0.8107
+
+
+
