@@ -502,6 +502,92 @@
                                     </li>
                                 </ul>
                             </div>
+
+                            <!-- TODO: 3. Debug and fix issues in dev mode GPU support (dev_humble_nvidia.yml) -->
+                            <div class="mt-2">
+                                <h4>
+                                    Debug and fix issues in dev mode GPU support
+                                    (dev_humble_nvidia.yml)
+                                </h4>
+                                <p class="mt-1 mb-1">
+                                    While enabling
+                                    <strong>NVIDIA GPU</strong> support in
+                                    <strong>development mode</strong>, I
+                                    discovered a bug in the
+                                    <code>dev_humble_nvidia.yml file</code>. The
+                                    configuration was not compatible and failed
+                                    to enable GPU acceleration. I raised the
+                                    issue, identified the root cause, and
+                                    submitted a pull request with a fix to
+                                    restore proper GPU functionality for
+                                    developers.
+                                </p>
+
+                                <div
+                                    style="
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        gap: 10px;
+                                        margin-top: 1rem;
+                                    "
+                                >
+                                    <img
+                                        src="/gsoc2025-Md_Shariar_Kabir/assets/img/week-12/week-12-img-2.png.png"
+                                        alt="week-12-img-2"
+                                        width="100%"
+                                        style="border-radius: 5px"
+                                    />
+                                </div>
+                                <p class="mt-2 mb-1">
+                                    The first step in addressing the issue was
+                                    to remove <code>runtime: nvidia</code> from
+                                    the
+                                    <code>dev_humble_nvidia.yaml</code> file.
+                                </p>
+                                <p class="mb-1">
+                                    This temporary fix allowed the program to
+                                    run without errors. However, it does not
+                                    connect to the
+                                    <code>robotics-database docker image</code>
+                                    and fails to enable the
+                                    <strong>Nvidia GPU</strong>, defaulting to
+                                    <strong>CPU</strong> usage instead.
+                                </p>
+                                <p class="mb-1">
+                                    dded GPU support by mounting
+                                    <code>"/dev/dri:/dev/dri"</code> and linked
+                                    the system with the
+                                    <code>robotics-database</code> in the
+                                    <code>dev_humble_nvidia.yaml</code> file.
+                                    The solution now runs smoothly with full
+                                    <strong>Nvidia GPU utilization</strong>.
+                                </p>
+                                <p class="mb-1">The issue:</p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://github.com/JdeRobot/RoboticsAcademy/issues/3205"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >GitHub issue #3205</a
+                                        >
+                                    </li>
+                                </ul>
+                                <p class="mt-2 mb-1">The pull request:</p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://github.com/JdeRobot/RoboticsAcademy/pull/3206"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >pull request #3206</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
                         <!-- TODO: REFERENCE -->
