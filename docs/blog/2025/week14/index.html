@@ -13,9 +13,9 @@
         />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>
-            Week 14: Aug 28 ~ Sep 3 | Meiqi Zhao | JdeRobot x GSoC2023
+            Week 14: Sept 01 ~ Sept 07 | Md. Shariar Kabir | JdeRobot x GSoC2025
         </title>
-        <meta name="author" content="JdeRobot x Google Summer of Code 2023" />
+        <meta name="author" content="JdeRobot x Google Summer of Code 2025" />
         <meta name="description" content="Behavior Metrics Model Integration" />
         <meta
             name="keywords"
@@ -78,11 +78,11 @@
         />
         <link
             rel="stylesheet"
-            href="/gsoc2023-Meiqi_Zhao/assets/css/main.css"
+            href="/gsoc2025-Md_Shariar_Kabir/assets/css/main.css"
         />
         <link
             rel="canonical"
-            href="http://localhost:4000/gsoc2023-Meiqi_Zhao/blog/2023/week14/"
+            href="http://localhost:4000/gsoc2025-Md_Shariar_Kabir/blog/2025/week14/"
         />
 
         <!-- Dark Mode -->
@@ -94,8 +94,8 @@
             id="highlight_theme_dark"
         />
 
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/theme.js"></script>
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/dark_mode.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/theme.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/dark_mode.js"></script>
     </head>
 
     <!-- Body -->
@@ -110,8 +110,8 @@
                 <div class="container">
                     <a
                         class="navbar-brand title font-weight-lighter"
-                        href="/gsoc2023-Meiqi_Zhao/"
-                        >Meiqi Zhao | JdeRobot x GSoC2023</a
+                        href="/gsoc2025-Md_Shariar_Kabir/"
+                        >Md. Shariar Kabir | JdeRobot x GSoC2025</a
                     >
                     <!-- Navbar Toggle -->
                     <button
@@ -136,7 +136,9 @@
                         <ul class="navbar-nav ml-auto flex-nowrap">
                             <!-- About -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/gsoc2023-Meiqi_Zhao/"
+                                <a
+                                    class="nav-link"
+                                    href="/gsoc2025-Md_Shariar_Kabir/"
                                     >home</a
                                 >
                             </li>
@@ -145,7 +147,7 @@
                             <li class="nav-item active">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/blog/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/blog/"
                                     >blog<span class="sr-only"
                                         >(current)</span
                                     ></a
@@ -156,21 +158,21 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/demo/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/demo/"
                                     >demo</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/roadmap/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/roadmap/"
                                     >roadmap</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2023-Meiqi_Zhao/about/"
+                                    href="/gsoc2025-Md_Shariar_Kabir/about/"
                                     >about</a
                                 >
                             </li>
@@ -201,23 +203,13 @@
 
             <div class="post">
                 <header class="post-header">
-                    <h1 class="post-title">Week 14: Aug 28 ~ Sep 3</h1>
-                    <p class="post-meta">September 3, 2023</p>
+                    <h1 class="post-title">Week 14: Sept 01 ~ Sept 07</h1>
+                    <p class="post-meta">September 07, 2025</p>
                 </header>
 
                 <article class="post-content">
                     <div id="markdown-content">
                         <h2 id="preliminaries">Preliminaries</h2>
-                        <p>
-                            This week our primary goal was to integrate our
-                            current model into Behavior Metrics, completing the
-                            entire pipeline for the project. Additionally, we
-                            expanded our dataset by training the model on 160
-                            episodes, up from the previous 80. While this
-                            typically augments learning, our evaluation results
-                            indicated marginal improvements from our prior
-                            model.
-                        </p>
 
                         <h2 id="objectives">Objectives</h2>
                         <ul class="task-list">
@@ -229,138 +221,9 @@
                                     checked
                                 />Update traffic generation PR
                             </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Add more data
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Add model as new brain in Behavior Metrics
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                />Include more information in evaluation results
-                                (e.g. collision per km)
-                            </li>
                         </ul>
 
                         <h2 id="execution">Execution</h2>
-                        <h3 id="training-on-a-larger-dataset">
-                            Training on a larger dataset
-                        </h3>
-                        <p>
-                            More data usually improves learning. This week we
-                            increased the dataset to twice the size. Below is
-                            the evaluation results for 50 testing episodes.
-                            Notably, there wasn’t a significant improvement in
-                            terms of overall driving score and succss rate
-                            compared to the previous
-                            <a href="/gsoc2023-Meiqi_Zhao/blog/2023/week12"
-                                >combined control model</a
-                            >
-                            models.
-                        </p>
-                        <ul>
-                            <li>Driving Score: 0.54</li>
-                            <li>Success Rate: 0.36</li>
-                            <li>Weighted Success Rate: 0.47</li>
-                            <li>
-                                Infractions:
-                                <ul>
-                                    <li>Wrong Turn: 18</li>
-                                    <li>Red Light: 1</li>
-                                    <li>Collision w/ Other Vehicle: 10</li>
-                                    <li>Collision w/ Other: 40</li>
-                                    <li>Junction Time Out: 10</li>
-                                    <li>
-                                        Non-junction Time Out: 4 Below are two
-                                        video demonstrations - one showcasing a
-                                        successful run, and the other detailing
-                                        a failed attempt.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <center>
-                            <iframe
-                                src="https://drive.google.com/file/d/1C7SDTad4M72MQMx6W3oEu9-BcTQebZYG/preview"
-                                width="640"
-                                height="480"
-                                allow="autoplay"
-                            ></iframe>
-                        </center>
-                        <center>
-                            <iframe
-                                src="https://drive.google.com/file/d/1vj7rj2n1WQxRpbEV99RFcPgv1PDRmnTl/preview"
-                                width="640"
-                                height="480"
-                                allow="autoplay"
-                            ></iframe>
-                        </center>
-
-                        <h3 id="behavior-metrics-integration">
-                            Behavior Metrics integration
-                        </h3>
-                        <p>
-                            This week, This week the bulk of the work lies on
-                            adding our segmentation-based imitation learning
-                            model to BehaviorMetrics as a new brain.
-                            Specifically, we added the model as a new brain in
-                            Behavior Metrics and the required utilities. A
-                            <a
-                                href="https://github.com/JdeRobot/BehaviorMetrics/pull/632"
-                                rel="external nofollow noopener"
-                                target="_blank"
-                                >PR</a
-                            >
-                            has been created to reflect the following changes:
-                        </p>
-
-                        <ul>
-                            <li>
-                                Added new yaml file, launch file, and object
-                                file as example
-                            </li>
-                            <li>
-                                Added new brain for loading imitation learning
-                                pytorch models
-                            </li>
-                            <li>
-                                Added ir_models directory for storing models
-                            </li>
-                            <li>
-                                Added utils function for running imitation
-                                learning models
-                            </li>
-                            <li>
-                                Added PilotNetOneHot model architecture
-                                implementation
-                            </li>
-                        </ul>
-
-                        <p>
-                            The following is a demonstration where our model
-                            gets loaded into Behavior Metrics:
-                        </p>
-                        <center>
-                            <iframe
-                                src="https://drive.google.com/file/d/1MxEEB3-spMUPww_hC-CP0jREBPsqShzV/preview"
-                                width="640"
-                                height="480"
-                                allow="autoplay"
-                            ></iframe>
-                        </center>
                     </div>
                 </article>
 
@@ -380,7 +243,7 @@
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week12/"
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week12/"
                         >Week 12~13: Aug 14 ~ Aug 27</a
                     >
                 </li>
@@ -388,7 +251,7 @@
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week8/"
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week8/"
                         >Week 8: July 17 ~ July 23</a
                     >
                 </li>
@@ -396,15 +259,15 @@
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week18/"
-                        >GSoC 2023: Project Recap</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week18/"
+                        >GSoC 2025: Project Recap</a
                     >
                 </li>
 
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week15/"
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week15/"
                         >Week 15: Sep 4 ~ Sep 10</a
                     >
                 </li>
@@ -412,7 +275,7 @@
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2023-Meiqi_Zhao/blog/2023/week4/"
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week4/"
                         >Week 4: June 19 ~ June 25</a
                     >
                 </li>
@@ -480,7 +343,7 @@
         ></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/masonry.js"
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/masonry.js"
             type="text/javascript"
         ></script>
 
@@ -491,7 +354,10 @@
             integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
             crossorigin="anonymous"
         ></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/zoom.js"></script>
+        <script
+            defer
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/zoom.js"
+        ></script>
 
         <!-- Bootstrap Table -->
         <script
@@ -500,11 +366,14 @@
         ></script>
 
         <!-- Load Common JS -->
-        <script src="/gsoc2023-Meiqi_Zhao/assets/js/no_defer.js"></script>
-        <script defer src="/gsoc2023-Meiqi_Zhao/assets/js/common.js"></script>
+        <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/no_defer.js"></script>
         <script
             defer
-            src="/gsoc2023-Meiqi_Zhao/assets/js/copy_code.js"
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/common.js"
+        ></script>
+        <script
+            defer
+            src="/gsoc2025-Md_Shariar_Kabir/assets/js/copy_code.js"
             type="text/javascript"
         ></script>
 
