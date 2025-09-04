@@ -19,7 +19,7 @@
         <meta name="author" content="JdeRobot x Google Summer of Code 2025" />
         <meta
             name="description"
-            content="first week of the community bonding period"
+            content="Two week's of the community bonding period"
         />
         <meta
             name="keywords"
@@ -101,10 +101,75 @@
 
         <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/theme.js"></script>
         <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/dark_mode.js"></script>
-        <!-- custom css -->
+
+        <!-- custom style -->
         <style>
+            /* p tag text justify */
             p {
                 text-align: justify;
+            }
+            /* Hide default checkbox appearance */
+            input[type="checkbox"].task-list-item-checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #ccc;
+                position: relative;
+                cursor: not-allowed;
+            }
+
+            /* Checked + disabled style */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked {
+                background-color: green; /* Green background */
+            }
+
+            /* White checkmark for checked box */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+            .task-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .task-list-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .task-list-item span {
+            }
+
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+
+            .bt {
+                border-top: 2px solid #2d2d2e;
+            }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
             }
         </style>
     </head>
@@ -283,19 +348,23 @@
                             actively participated in several introductory and
                             planning meetings. These included:
                         </p>
-                        <ul>
-                            <li>
+                        <ul class="task-list">
+                            <li class="task-list-item">
                                 One-on-one sessions with my mentors to align on
                                 project goals, milestones, and expectations.
                             </li>
-                            <li>
+                            <li class="task-list-item">
                                 Organization-wide meetings to understand ongoing
                                 projects, development workflows, and
                                 collaboration norms.
                             </li>
-                            <li>
+                            <li class="task-list-item">
                                 GSoC official meetings to stay updated with
                                 timelines, best practices, and guidelines.
+                            </li>
+                            <li class="task-list-item">
+                                Become familiar with the implementation and
+                                workflow of existing Robotics-Academy exercises
                             </li>
                         </ul>
                         <p>
@@ -310,6 +379,83 @@
                             width="100%"
                             srcset=""
                         />
+
+                        <div class="mt-2">
+                            <p>
+                                During the community bonding meeting, I decided
+                                to focus on exploring the
+                                <strong><em>old version</em></strong> of the
+                                <strong><em>Digit Classification</em></strong>
+                                and
+                                <strong><em>Human Detection</em></strong>
+                                exercises. My goal is to run these exercises on
+                                my local machine, study their
+                                <strong><em>codebases</em></strong
+                                >, and analyze how the
+                                <strong><em>models</em></strong> are integrated
+                                into the
+                                <strong
+                                    ><em>Robotics-Academy framework</em></strong
+                                >. This exploration will provide hands-on
+                                experience with the
+                                <strong><em>architecture</em></strong
+                                >, coding style, and deployment practices used
+                                in
+                                <strong><em>simulation-based tasks</em></strong
+                                >. It will also serve as preparation for
+                                updating and improving the
+                                <strong><em>digit classification</em></strong>
+                                and
+                                <strong><em>human detection</em></strong>
+                                exercises, ensuring they remain robust and
+                                stable. Building on this foundation, I will then
+                                proceed to the development of the
+                                <strong
+                                    ><em>End-to-End Visual Control</em></strong
+                                >
+                                exercise.
+                            </p>
+
+                            <div
+                                style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    gap: 10px;
+                                    margin-top: 2rem;
+                                "
+                            >
+                                <img
+                                    src="/gsoc2025-Md_Shariar_Kabir/assets/img/community_bonding/community_bonding_2.png"
+                                    alt="week-12-img-1"
+                                    width="100%"
+                                    style="border-radius: 10px"
+                                />
+                                <span>Human Detection</span>
+                            </div>
+
+                            <div
+                                style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    gap: 10px;
+                                    margin-top: 2rem;
+                                "
+                            >
+                                <img
+                                    src="/gsoc2025-Md_Shariar_Kabir/assets/img/community_bonding/community_bonding_3.png"
+                                    alt="week-12-img-1"
+                                    width="100%"
+                                    style="border-radius: 10px"
+                                />
+                                <span>Digit Classification</span>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
@@ -317,55 +463,6 @@
                 <hr />
                 <br />
                 <ul class="list-disc pl-8"></ul>
-
-                <!-- TODO: COMMENTING FOR NOW -->
-                <!-- Adds related posts to the end of an article -->
-                <!-- <h2 class="text-3xl font-semibold mb-4 mt-12">
-                    Enjoy Reading This Article?
-                </h2>
-                <p class="mb-2">
-                    Here are some more articles you might like to read next:
-                </p>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week18/"
-                        >GSoC 2025: Project Recap</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/community-bonding-week-2/"
-                        >Community Bonding: May 22 ~ May 28</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week3/"
-                        >Week 3: June 12 ~ June 18</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week12/"
-                        >Week 12~13: Aug 14 ~ Aug 27</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week8/"
-                        >Week 8: July 17 ~ July 23</a
-                    >
-                </li> -->
             </div>
         </div>
 
