@@ -16,7 +16,10 @@
             Week 14: Sept 01 ~ Sept 07 | Md. Shariar Kabir | JdeRobot x GSoC2025
         </title>
         <meta name="author" content="JdeRobot x Google Summer of Code 2025" />
-        <meta name="description" content="Behavior Metrics Model Integration" />
+        <meta
+            name="description"
+            content="Complete End-to-End Visual Control User Document."
+        />
         <meta
             name="keywords"
             content="jekyll, jekyll-theme, academic-website, portfolio-website"
@@ -86,7 +89,76 @@
         />
 
         <!-- Dark Mode -->
+        <!-- custom style -->
+        <style>
+            /* p tag text justify */
+            p {
+                text-align: justify;
+            }
+            /* Hide default checkbox appearance */
+            input[type="checkbox"].task-list-item-checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #ccc;
+                position: relative;
+                cursor: not-allowed;
+            }
 
+            /* Checked + disabled style */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked {
+                background-color: green; /* Green background */
+            }
+
+            /* White checkmark for checked box */
+            input[type="checkbox"].task-list-item-checkbox:disabled:checked::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+            .task-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .task-list-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .task-list-item span {
+            }
+
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+
+            .bt {
+                border-top: 2px solid #2d2d2e;
+            }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+        </style>
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css"
@@ -165,13 +237,6 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="/gsoc2025-Md_Shariar_Kabir/roadmap/"
-                                    >roadmap</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
                                     href="/gsoc2025-Md_Shariar_Kabir/about/"
                                     >about</a
                                 >
@@ -209,21 +274,53 @@
 
                 <article class="post-content">
                     <div id="markdown-content">
-                        <h2 id="preliminaries">Preliminaries</h2>
+                        <!-- TODO: PRELIMINARIES -->
+                        <div class="mb-2">
+                            <h2 id="preliminaries">Preliminaries</h2>
+                        </div>
 
-                        <h2 id="objectives">Objectives</h2>
-                        <ul class="task-list">
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Update traffic generation PR
-                            </li>
-                        </ul>
+                        <!-- TODO: OBJECTIVES -->
+                        <div class="mb-2">
+                            <h2 id="objectives">Objectives</h2>
+                            <ul class="task-list">
+                                <li class="task-list-item">
+                                    <input
+                                        type="checkbox"
+                                        class="task-list-item-checkbox"
+                                        disabled
+                                        checked
+                                    />Complete User Document.
+                                </li>
+                            </ul>
+                        </div>
 
-                        <h2 id="execution">Execution</h2>
+                        <!-- TODO: EXECUTION -->
+                        <div class="mb-2">
+                            <h2 id="execution">Execution</h2>
+                        </div>
+
+                        <!-- TODO: REFERENCE -->
+                        <div>
+                            <h2 id="references" style="margin-top: 2rem">
+                                References
+                            </h2>
+                            <p
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                "
+                            >
+                                [1]
+                                <a
+                                    href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/end_to_end_visual_control/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    End-to-End Visual Control Exercise
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </article>
 
@@ -239,44 +336,32 @@
                 <p class="mb-2">
                     Here are some more articles you might like to read next:
                 </p>
-
+                <li class="my-2">
+                    <a
+                        class="text-pink-700 underline font-semibold hover:text-pink-800"
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week13/"
+                        >Week 13: Aug 25 ~ Aug 31</a
+                    >
+                </li>
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
                         href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week12/"
-                        >Week 12~13: Aug 14 ~ Aug 27</a
+                        >Week 12: Aug 18 ~ Aug 24</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week8/"
-                        >Week 8: July 17 ~ July 23</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week11/"
+                        >Week 11: Aug 11 ~ Aug 17</a
                     >
                 </li>
-
                 <li class="my-2">
                     <a
                         class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week18/"
-                        >GSoC 2025: Project Recap</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week15/"
-                        >Week 15: Sep 4 ~ Sep 10</a
-                    >
-                </li>
-
-                <li class="my-2">
-                    <a
-                        class="text-pink-700 underline font-semibold hover:text-pink-800"
-                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week4/"
-                        >Week 4: June 19 ~ June 25</a
+                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week10/"
+                        >Week 10: Aug 04 ~ Aug 10</a
                     >
                 </li>
             </div>
