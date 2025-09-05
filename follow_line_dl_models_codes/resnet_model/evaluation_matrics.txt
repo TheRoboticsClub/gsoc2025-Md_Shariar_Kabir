@@ -1,0 +1,7 @@
+--- Evaluation Metrics ---
+Combined - MSE: 0.0094, MAE: 0.0558, R2: 0.9896
+Linear Velocity (v) - MSE: 0.0095, MAE: 0.0516, R2: 0.9898
+Angular Velocity (w) - MSE: 0.0093, MAE: 0.0601, R2: 0.9893
+
+
+
