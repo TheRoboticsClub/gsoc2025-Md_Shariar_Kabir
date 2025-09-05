@@ -165,6 +165,21 @@
                 text-decoration: underline;
                 text-underline-offset: 2px;
             }
+            .gradient {
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                font-size: 32px;
+                background-image: linear-gradient(
+                    to right,
+                    #ff5200,
+                    #efff00,
+                    yellow,
+                    green,
+                    blue
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         </style>
 
         <script src="/gsoc2025-Md_Shariar_Kabir/assets/js/theme.js"></script>
@@ -434,32 +449,36 @@
 
                             <!-- TODO: End of the GSOC -->
                             <div class="mb-2">
-                                <h4
-                                    class="mt-2 mb-2"
-                                    style="
-                                        text-decoration: underline;
-                                        text-underline-offset: 4px;
-                                    "
-                                >
+                                <h4 class="mt-2 mb-2 gradient">
                                     Is This the End… or the Beginning of My Deep
                                     Open-Source Journey with JdeRobot?
+                                    <span
+                                        aria-hidden="true"
+                                        class=""
+                                        style="color: inherit"
+                                    >
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            data-rtl-flip=""
+                                            class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]"
+                                        >
+                                            <path
+                                                d="M14.3349 13.3301V6.60645L5.47065 15.4707C5.21095 15.7304 4.78895 15.7304 4.52925 15.4707C4.26955 15.211 4.26955 14.789 4.52925 14.5293L13.3935 5.66504H6.66011C6.29284 5.66504 5.99507 5.36727 5.99507 5C5.99507 4.63273 6.29284 4.33496 6.66011 4.33496H14.9999L15.1337 4.34863C15.4369 4.41057 15.665 4.67857 15.665 5V13.3301C15.6649 13.6973 15.3672 13.9951 14.9999 13.9951C14.6327 13.9951 14.335 13.6973 14.3349 13.3301Z"
+                                            ></path>
+                                        </svg>
+                                    </span>
                                 </h4>
+
                                 <span class="mt-1" style="font-style: italic"
                                     >“GSoC may have ended, but my open-source
                                     story is just beginning. Excited to continue
                                     my contributions to JdeRobot and to explore
                                     new horizons in robotics and AI!"</span
                                 >
-                                <p>
-                                    If you're interested to know my plan, then
-                                    click
-                                    <!-- <a
-                                        href="https://theroboticsclub.github.io/gsoc2025-Md_Shariar_Kabir/blog/2025/gsoc-2025-recap/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    ></a> -->
-                                    here.
-                                </p>
                             </div>
                         </div>
 
