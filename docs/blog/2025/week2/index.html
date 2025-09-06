@@ -120,11 +120,30 @@
                 border-width: 0 2px 2px 0;
                 transform: rotate(45deg);
             }
-
             .task-list-item {
                 display: flex;
                 align-items: center;
                 gap: 10px;
+            }
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+
+            .bt {
+                border-top: 2px solid #2d2d2e;
+            }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
             }
         </style>
 
@@ -251,19 +270,36 @@
                             In the weekly meeting held on 06 June, we discussed
                             the previous work and outlined the project's current
                             focus, which is to extend the capabilities of the
-                            RoboticsAcademy platform by integrating deep
-                            learning models in ONNX format into both existing
-                            and new exercises. The goal is to enable users to
-                            upload their own models and run inference within the
-                            RADI (RoboticsAcademy Docker Image) environment.
-                            Initial work includes exploring the architecture of
-                            the RoboticsAcademy Docker image, creating Human
-                            Detection and Digit Classification exercises, and
-                            integrating a file upload mechanism for ONNX models.
-                            This week also involves studying PyTorch to better
-                            understand deep learning workflows and ensure
-                            compatibility during ONNX model conversion and
-                            deployment.
+                            <a
+                                href="https://github.com/JdeRobot/RoboticsAcademy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RoboticsAcademy</a
+                            >
+                            platform by integrating deep learning models in
+                            <a
+                                href="https://onnx.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >ONNX</a
+                            >
+                            format into both existing and new exercises. The
+                            goal is to enable users to upload their own models
+                            and run inference within the
+                            <a
+                                href="https://hub.docker.com/u/jderobot"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RADI (RoboticsAcademy Docker Image)</a
+                            >
+                            environment. Initial work includes exploring the
+                            architecture of the RoboticsAcademy Docker image,
+                            creating Human Detection and Digit Classification
+                            exercises, and integrating a file upload mechanism
+                            for ONNX models. This week also involves studying
+                            PyTorch to better understand deep learning workflows
+                            and ensure compatibility during ONNX model
+                            conversion and deployment.
                         </p>
                         <h2 id="objectives">Objectives</h2>
                         <ul class="task-list" style="list-style: none">
@@ -333,22 +369,28 @@
                             it to ensure proper functionality in the production
                             environment.
                         </p>
-                        <h3 id="issue">Issue</h3>
-                        <a
-                            href="https://github.com/JdeRobot/RoboticsAcademy/issues/3106"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >issue #3106</a
-                        >
-                        <h3 id="issue">Pull Request</h3>
-                        <a
-                            href="https://github.com/JdeRobot/RoboticsAcademy/pull/3113"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >PRs #3113</a
-                        >
+                        <h4 id="issue">
+                            Issue:
+                            <a
+                                href="https://github.com/JdeRobot/RoboticsAcademy/issues/3106"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >#3106</a
+                            >
+                        </h4>
 
-                        <h2 id="execution">Execution</h2>
+                        <h4 id="issue">
+                            Pull Request:
+                            <a
+                                href="https://github.com/JdeRobot/RoboticsAcademy/pull/3113"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                #3113</a
+                            >
+                        </h4>
+
+                        <h2 id="execution" class="mt-2">Execution</h2>
                         <p style="width: 100%; text-align: justify">
                             I created two branches, one for
                             <a
@@ -372,7 +414,13 @@
                                 >branch</a
                             >
                             that contains both exercises. I also updated the
-                            local database.
+                            local database. This involved updating the exercise
+                            metadata and ensuring that both new exercises are
+                            properly registered and accessible through the
+                            RoboticsAcademy interface. I also verified that the
+                            ONNX model upload and inference features work
+                            seamlessly with the updated database, allowing users
+                            to test their own models within the new exercises.
                         </p>
 
                         <div
@@ -400,7 +448,7 @@
                             Human Detection and Digit Classification are
                             available in Prototype mode.
                         </p>
-                        <h3 id="results">Results</h3>
+                        <h3 id="results" class="mt-2 mb-1">Video Tutorial</h3>
                         <div
                             style="
                                 width: 100%;
@@ -424,8 +472,8 @@
                             exercises with DL model.
                         </h5>
 
-                        <h2 id="references">References</h2>
                         <!-- TODO: REFERENCE -->
+                        <h2 id="references" class="mt-2">References</h2>
                         <p>
                             [1]
                             <a
@@ -444,6 +492,32 @@
                                 >Digit Classification Exercise using Deep
                                 Learning
                             </a>
+                        </p>
+                        <p>
+                            [3]
+                            <a
+                                href="https://github.com/JdeRobot/RoboticsAcademy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RoboticsAcademy</a
+                            >
+                        </p>
+                        <p>
+                            [4]
+                            <a
+                                href="https://onnx.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >ONNX</a
+                            >
+                        </p>
+                        <p>
+                            [5]<a
+                                href="https://hub.docker.com/u/jderobot"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >RADI (RoboticsAcademy Docker Image)</a
+                            >
                         </p>
                     </div>
                 </article>
