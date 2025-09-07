@@ -89,7 +89,12 @@
             href="http://localhost:4000/gsoc2025-Md_Shariar_Kabir/blog/2025/week3/"
         />
         <!--  -->
+        <!-- custom style -->
         <style>
+            /* p tag text justify */
+            p {
+                text-align: justify;
+            }
             /* Hide default checkbox appearance */
             input[type="checkbox"].task-list-item-checkbox {
                 appearance: none;
@@ -120,11 +125,38 @@
                 border-width: 0 2px 2px 0;
                 transform: rotate(45deg);
             }
-
+            .task-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
             .task-list-item {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 gap: 10px;
+            }
+            .task-list-item span {
+            }
+
+            .mt-2 {
+                margin-top: 2rem !important;
+            }
+            .mt-1 {
+                margin-top: 1rem !important;
+            }
+            .mb-2 {
+                margin-bottom: 2rem !important;
+            }
+            .mb-1 {
+                margin-bottom: 1rem !important;
+            }
+
+            .bt {
+                border-top: 2px solid #2d2d2e;
+            }
+            .underline {
+                text-decoration: underline;
+                text-underline-offset: 2px;
             }
         </style>
         <!-- Dark Mode -->
@@ -256,78 +288,164 @@
                             This week, I began laying the groundwork for these
                             exercises by setting up the necessary
                             infrastructure, improving UI elements, and training
-                            the digit classification model with the MNIST
-                            dataset and exporting the model as an ONNX model.
+                            the digit classification model with the
+                            <a
+                                href="https://www.tensorflow.org/datasets/catalog/mnist"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >MNIST dataset</a
+                            >
+                            and exporting the model as an
+                            <a
+                                href="https://onnx.ai/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >ONNX</a
+                            >
+                            format.
                         </p>
-                        <p>📝 Created Issues for Two New Exercises:</p>
-                        <ul>
-                            <li>
+
+                        <!-- TODO: OBJECTIVES -->
+                        <div class="mt-2">
+                            <h2 id="objectives">Objectives</h2>
+                            <ul class="task-list">
+                                <li class="task-list-item">
+                                    <input
+                                        type="checkbox"
+                                        class="task-list-item-checkbox"
+                                        disabled
+                                        checked
+                                    />Create issues and pull requests for human
+                                    detection and digit classification
+                                    exercises.
+                                </li>
+                                <li class="task-list-item">
+                                    <input
+                                        type="checkbox"
+                                        class="task-list-item-checkbox"
+                                        disabled
+                                        checked
+                                    />Improve the user interface for the upload
+                                    model button and filter according to the
+                                    exercise name.
+                                </li>
+                                <li class="task-list-item">
+                                    <input
+                                        type="checkbox"
+                                        class="task-list-item-checkbox"
+                                        disabled
+                                        checked
+                                    />Train a Sample Deep Learning Model
+                                </li>
+                                <li class="task-list-item">
+                                    Add Abstract the model path
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- TODO: EXECUTIONS -->
+                        <div class="mt-2">
+                            <h2 class="mb-1">Execution</h2>
+                            <!-- TODO: CREATE ISSUES AND PRS FOR DL EXERCISES -->
+                            <div class="mb-2">
+                                <p class="mb-1">
+                                    For the digit classification exercise, I
+                                    documented the task in a GitHub issue,
+                                    focusing on building a model to recognize
+                                    handwritten digits. Then I created an issue
+                                    to outline the task of building a human
+                                    detection model, where the objective was to
+                                    train a deep learning pipeline capable of
+                                    identifying humans in images. Finally, I
+                                    submitted pull requests for both exercises,
+                                    corresponding to the issues created.
+                                </p>
+                                <p class="mb-1">
+                                    📝 Created Issues for Two New Exercises:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://github.com/JdeRobot/RoboticsAcademy/issues/3116"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >Human detection exercise #3116</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://github.com/JdeRobot/RoboticsAcademy/issues/3118"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >Digit classification exercise
+                                            #3118</a
+                                        >
+                                    </li>
+                                </ul>
+                                <p class="mt-2 mb-1">
+                                    🔀 Submitted Pull Requests for the
+                                    Exercises:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="https://github.com/JdeRobot/RoboticsAcademy/pull/3117"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >Human detection exercise #3117</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://github.com/JdeRobot/RoboticsAcademy/pull/3119"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >Digit classification exercise
+                                            #3119</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- TODO: -->
+                        </div>
+
+                        <!-- TODO: REFENERCE -->
+                        <div class="mt-1">
+                            <h2 id="references" style="margin-top: 2rem">
+                                References
+                            </h2>
+                            <p
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                "
+                            >
+                                [1]
                                 <a
-                                    href="https://github.com/JdeRobot/RoboticsAcademy/issues/3116"
+                                    href="https://www.tensorflow.org/datasets/catalog/mnist"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Human detection exercise</a
+                                    >MNIST dataset</a
                                 >
-                            </li>
-                            <li>
+                            </p>
+                            <p
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                "
+                            >
+                                [2]
                                 <a
-                                    href="https://github.com/JdeRobot/RoboticsAcademy/issues/3118"
+                                    href="https://onnx.ai/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Digit classification exercise</a
+                                    >ONNX</a
                                 >
-                            </li>
-                        </ul>
-                        <p>🔀 Submitted Pull Requests for the Exercises:</p>
-                        <ul>
-                            <li>
-                                <a
-                                    href="https://github.com/JdeRobot/RoboticsAcademy/pull/3117"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    >Human detection exercise</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/JdeRobot/RoboticsAcademy/pull/3119"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    >Digit classification exercise</a
-                                >
-                            </li>
-                        </ul>
-                        <h2 id="objectives">Objectives</h2>
-                        <ul class="task-list">
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Create issues and pull requests for human
-                                detection and digit classification exercises.
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Improve the user interface for the upload
-                                model button and filter according to the
-                                exercise name.
-                            </li>
-                            <li class="task-list-item">
-                                <input
-                                    type="checkbox"
-                                    class="task-list-item-checkbox"
-                                    disabled
-                                    checked
-                                />Train a Sample DL Model
-                            </li>
-                            <li class="task-list-item"></li>
-                        </ul>
+                            </p>
+                        </div>
                     </div>
                 </article>
 
