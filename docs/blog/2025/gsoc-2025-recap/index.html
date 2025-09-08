@@ -455,14 +455,15 @@
                                         >NVIDIA CUDA and cuDNN</a
                                     >
                                 </li>
-                                <!-- TODO: links-->
                                 <li>
                                     <a
-                                        href=""
+                                        href="https://pypi.org/project/onnx2pytorch/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                    ></a>
+                                        >onnx2pytorch</a
+                                    >
                                 </li>
+                                <!-- TODO: links-->
                                 <li>
                                     <a
                                         href=""
@@ -911,22 +912,30 @@
                                 Behavior Metrics platform, expanding its
                                 capabilities to include traffic.
                             </p>
-
-                            <h3 id="week-9">
-                                <a
-                                    href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week9"
-                                    >Week 9</a
-                                >
-                            </h3>
-                            <p>
-                                In Week 9, we implemented Data Aggregation
-                                (DAgger) to iteratively enhance the model’s
-                                behavior and refined the evaluation metrics to
-                                detect whether the model correctly follows
-                                turning instructions.
-                            </p>
                             -->
 
+                            <!-- TODO: WEEK-9 -->
+                            <div class="mb-1">
+                                <h3 id="week-9">
+                                    <a
+                                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week9"
+                                        >Week - 9</a
+                                    >
+                                </h3>
+                                <p>
+                                    I explored loading ONNX format models using
+                                    onnx2pytorch but encountered stability
+                                    issues with the package. After discussions,
+                                    we evaluated two alternatives: (1) using
+                                    onnxruntime-gpu with explicit CUDA/cuDNN
+                                    installs in RADI, and (2) using
+                                    onnxruntime-gpu alongside PyTorch with CUDA
+                                    support in RADI. Since the first solution
+                                    was heavy and complex, we decided to adopt
+                                    the second option, as it is lighter and more
+                                    stable.
+                                </p>
+                            </div>
                             <!-- TODO: WEEK-8 -->
                             <div class="mb-1">
                                 <h3 id="week-8">
