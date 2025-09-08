@@ -405,7 +405,6 @@
                                         >MNIST dataset</a
                                     >
                                 </li>
-                                <!-- TODO: links-->
                                 <li>
                                     <a
                                         href="https://pytorch.org/"
@@ -413,6 +412,61 @@
                                         rel="noopener noreferrer"
                                         >PyTorch</a
                                     >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Visual Follow Line</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://gsyc.urjc.es/jmplaza/papers/waf2024-jmplaza-final.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >[paper] Imitation Learning for vision
+                                        based Autonomous Driving with Ackermann
+                                        cars</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://jderobot.github.io/RoboticsAcademy/exercises/AutonomousCars/follow_line/#pid-control"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >PID Controller</a
+                                    >
+                                </li>
+                                <!-- TODO: links-->
+                                <li>
+                                    <a
+                                        href=""
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href=""
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href=""
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        href=""
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    ></a>
                                 </li>
                                 <li>
                                     <a
@@ -909,22 +963,30 @@
                                 sophisticated metrics inspired by the CARLA
                                 Leaderboard.
                             </p>
-
-                            <h3 id="week-5">
-                                <a
-                                    href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week5"
-                                    >Week 5</a
-                                >
-                            </h3>
-                            <p>
-                                In Week 5, the primary focus was on refining the
-                                model’s adherence to traffic lights by
-                                incorporating traffic light status as an
-                                additional input and experimenting with one-hot
-                                encoding for high-level commands.
-                            </p>
                             -->
 
+                            <!-- TODO: WEEK-5 -->
+                            <div>
+                                <h3 id="week-5">
+                                    <a
+                                        href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week5"
+                                        >Week - 5</a
+                                    >
+                                </h3>
+                                <p>
+                                    In Week 5, I collected a large dataset of
+                                    84,969 images from the Follow-Line circuits.
+                                    For each image, I stored the image name with
+                                    file path, linear velocity (v), and angular
+                                    velocity (w) in a CSV file. I cropped images
+                                    from 640×480 to 640×242 to remove irrelevant
+                                    sky portions, following techniques validated
+                                    by a research paper shared by my mentors.
+                                    Data was collected inside the Docker
+                                    container and later transferred to my local
+                                    machine for training.
+                                </p>
+                            </div>
                             <!-- TODO: WEEK-4 -->
                             <div>
                                 <h3 id="week-4">
@@ -961,7 +1023,7 @@
                                 <h3 id="week-3">
                                     <a
                                         href="/gsoc2025-Md_Shariar_Kabir/blog/2025/week3"
-                                        >Week 3</a
+                                        >Week - 3</a
                                     >
                                 </h3>
                                 <p>
